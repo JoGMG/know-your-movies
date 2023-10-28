@@ -1,0 +1,63 @@
+.above-footer {
+    background-color: #101010;
+    padding: 3% 3%;
+}
+
+.above-footer h2 {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    margin-bottom: 4%;
+    font-size: 2em;
+}
+
+.above-footer h3, h4 {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.above-footer, footer p {
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.frank, .dorcas, .joshua {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#photo {
+    border-radius: 10%;
+    width: 70%;
+}
+
+.socials-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#socials {
+    width: 15%;
+}
+
+footer {
+    background-color: #101010;
+    padding: 1% 1%;
+    border-top: 1px solid #FFFFFF;
+    text-align: center;
+}

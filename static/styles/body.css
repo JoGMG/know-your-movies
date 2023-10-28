@@ -1,0 +1,130 @@
+body {
+    margin: 0px;
+}
+
+.body-container {
+    padding-top: 14%;
+    padding-bottom: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-container h1 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 3em;
+    margin-bottom: 7%;
+}
+
+.search-by-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-by-button {
+    display: flex;
+    align-items: center;
+    background-color: #101010;
+    border: none;
+    border-radius: 2em;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    width: 140%;
+    padding: 12% 16% 12% 16%;
+    cursor: pointer;
+}
+
+.search-by-button:hover {
+    background-color: #2A2A2A;
+}
+
+.search-by-button img {
+    width: 17px;
+    margin-left: auto;
+}
+
+.search-by-option {
+    display: none;
+    background-color: #101010;
+    color: #FFFFFF;
+    width: 190%;
+    padding: 13% 5% 15% 5%;
+    border-radius: 0 0 1.5em 1.5em;
+}
+
+.separator {
+    border-bottom: 1px solid #FFFFFF;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+#movie-name, #cast-name {
+    accent-color: #1FBFFB;
+}
+
+label {
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-left: 1%;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    width: 100%;
+}
+
+.search-input {
+    background-color: #707070;
+    color: #FFFFFF;
+    border: none;
+    padding: 1.6% 25% 1.6% 3%;
+    border-radius: 3em 0 0 3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+.search-button {
+    background-color: #101010;
+    border: none;
+    color: #FFFFFF;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 0 3em 3em 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.search-button:hover {
+    background-color: #2A2A2A;
+}
+
+::placeholder {
+    color: #D1D1D1;
+}
+
+/* search by javasript classes */
+.rotate {
+    transform: rotate(180deg);
+}
+
+.radius {
+    border-radius: 1.5em 1.5em 0 0;
+    border-bottom: 1px solid #FFFFFF;
+    width: 200%;
+}
+
+/* search-input javaScript classes */
+.input-color {
+    background-color: #505050;
+}
