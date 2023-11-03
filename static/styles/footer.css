@@ -1,20 +1,18 @@
 .above-footer {
     background-color: #101010;
-    padding: 3% 3%;
+    padding: 41px 3%;
 }
 
 .above-footer h2 {
-    color: #FFFFFF;
     display: flex;
     justify-content: center;
     font-family: 'Lexend', sans-serif;
     font-weight: 500;
-    margin-bottom: 4%;
+    margin-bottom: 50px;
     font-size: 2em;
 }
 
-.above-footer h3, h4 {
-    color: #FFFFFF;
+.above-footer h3, .above-footer h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
@@ -35,7 +33,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 1%;
+    padding-top: 12px;
     padding-left: 3%;
     padding-right: 3%;
 }
@@ -57,7 +55,7 @@
 
 footer {
     background-color: #101010;
-    padding: 1% 1%;
+    padding: 13px 1%;
     border-top: 1px solid #FFFFFF;
     text-align: center;
 }

@@ -9,7 +9,7 @@
         <link href='https://fonts.googleapis.com/css?family=Lexend:400,500|Roboto:300,400,500&display=swap' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="../static/scripts/body.js"></script>
-        <title>Know Your Movies</title>
+        <title>Know Your Movies (KYM)</title>
     </head>
     <body>
         <header>
@@ -17,24 +17,27 @@
                 <img src="../static/icons/kym-logo-transparent.svg" alt="KYM Logo">
             </div>
         </header>
-        <div class="body-container">
+        <div class="homepage-container">
+            <div class="search-by-overlay"></div>
             <h1>Welcome to KYM!</h1>
             <div class="search-by-container">
-                <button class="search-by-button">
-                    Search By
+                <div class="search-by-button" role="button" tabindex="0">
+                    <span class="search-by-button-text">
+                        Search By
+                    </span>
                     <img src="../static/icons/chevron-down.svg" alt="chevron-down icon">
-                </button>
-                <div class="search-by-option">
-                    <input type="radio" id="movie-name" name="search-by-option" value="movie-name">
+                </div>
+                <div class="search-by-dropdown">
+                    <input type="radio" id="movie-name" name="search-by-dropdown-option" value="movie-name">
                     <label for="movie-name">Movie name</label><br>
                     <div class="separator"></div>
-                    <input type="radio" id="cast-name" name="search-by-option" value="cast-name">
+                    <input type="radio" id="cast-name" name="search-by-dropdown-option" value="cast-name">
                     <label for="cast-name">Cast name</label><br>
                 </div>
             </div>
             <div class="search-container">
-                <input type="text" class="search-input" placeholder="Type here...">
-                <button class="search-button">Search</button>
+                <textarea name="search-keywords" class="search-input" cols="30" rows="10" placeholder="Type here..."></textarea>
+                <span class="search-button" role="button" tabindex="0">Search</span>
             </div>
         </div>
         <div class="above-footer">

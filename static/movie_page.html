@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="../static/icons/kym-logo-transparent.svg">
+        <link rel="stylesheet" href="../static/styles/header.css">
+        <link rel="stylesheet" href="../static/styles/body.css">
+        <link rel="stylesheet" href="../static/styles/footer.css">
+        <link href='https://fonts.googleapis.com/css?family=Lexend:400,500|Roboto:300,400,500&display=swap' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../static/scripts/body.js"></script>
+        <title>Know Your Movies (KYM)</title>
+    </head>
+    <body>
+        <header>
+            <div class="chevron-button-overlay"></div>
+            <div class="logo">
+                <img src="../static/icons/kym-logo-transparent.svg" alt="KYM Logo">
+            </div>
+            <div class="header-search-container">
+                <div class="chevron-button-container">
+                    <div class="chevron-button" role="button" tabindex="0">
+                        <img src="../static/icons/chevron-down.svg" alt="chevron-down icon">
+                    </div>
+                    <div class="chevron-button-dropdown">
+                        <input type="radio" id="movie-name" name="search-by-option" value="movie-name">
+                        <label for="movie-name">Movie name</label><br>
+                        <div class="separator"></div>
+                        <input type="radio" id="cast-name" name="search-by-option" value="cast-name">
+                        <label for="cast-name">Cast name</label><br>
+                    </div>
+                </div>
+                <div class="input-search-container">
+                    <textarea name="header-search-keywords" class="search-input-header" cols="30" rows="10" placeholder="Type here..."></textarea>
+                    <span class="search-button-header" role="button" tabindex="0">Search</span>
+                </div>
+            </div>
+        </header>
+        <div class="moviepage-container">
+            <div class="movie-details-section">
+                <div class="poster-moviepage">
+                    <img src="../static/images/posters/the-dark-night.jpg" alt="The Dark Knight Poster">
+                </div>
+                <div class="movie-metadata">
+                    <div class="title-moviepage">
+                        <h1>The Dark Knight</h1>
+                    </div>
+                    <div class="date-moviepage">
+                        2008
+                    </div>
+                    <div class="genre-moviepage">
+                        Drama/Action
+                    </div>
+                    <div class="summary-moviepage">
+                        Summary
+                        <p>Batman has a new foe, the Joker, who is an accomplished criminal hell-bent on decimating Gotham City. Together with Gordon and Harvey Dent, Batman struggles to thwart the Joker before it is too late.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cast-section">
+                <h2>Cast</h2>
+                <div class="cast-container">
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/christian-bale.jpg" alt="Christian Bale Photo">
+                        </div>
+                        <div class="cast-name">
+                            Christian Bale
+                            <p><span>as</span> Batman, Bruce Wayne</p>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/heath-ledger.jpg" alt="Heath Ledger Photo">
+                        </div>
+                        <div class="cast-name">
+                            Heath Ledger
+                            <p><span>as</span> Joker</p>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/gary-oldman.jpg" alt="Gary Oldman Photo">
+                        </div>
+                        <div class="cast-name">
+                            Gary Oldman
+                            <p><span>as</span> James Gordon</p>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/aaron-eckhart.jpg" alt="Aaron Eckhart Photo">
+                        </div>
+                        <div class="cast-name">
+                            Aaron Eckhart
+                            <p><span>as</span> Harvey Dent/Two-Face</p>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/michael-caine.jpg" alt="Michael Caine Photo">
+                        </div>
+                        <div class="cast-name">
+                            Michael Caine
+                            <p><span>as</span> Alfred Pennyworth</p>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/morgan-freeman.jpg" alt="Morgan Freeman Photo">
+                        </div>
+                        <div class="cast-name">
+                            Morgan Freeman
+                            <p><span>as</span> Lucius Fox</p>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/maggie-gyllenhaal.jpg" alt="Maggie Gyllenhaal Photo">
+                        </div>
+                        <div class="cast-name">
+                            Maggie Gyllenhaal
+                            <p><span>as</span> Rachel Dawes</p>
+                        </div>
+                    </div>
+                    <div class="cast">
+                        <div class="cast-headshot">
+                            <img src="../static/images/the-dark-knight/cast/cillian-murphy.jpg" alt="Cillian Murphy Photo">
+                        </div>
+                        <div class="cast-name">
+                            Cillian Murphy
+                            <p><span>as</span> Scarecrow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-section">
+                <h2>Reviews</h2>
+                <div class="review-container">
+                    <div class="review-container-header">
+                        <div class="review-username">
+                            James Lough
+                        </div>
+                        <div class="review-date">
+                            23 February, 2023
+                        </div>
+                    </div>
+                    <div class="review-quote-container">
+                        <img class="left-quote-icon" src="../static/icons/double-quote-icon-left.svg" alt="quote icon left">
+                        <img class="right-quote-icon" src="../static/icons/double-quote-icon-right.svg" alt="quote icon right">
+                        <div class="leave-a-review-button" role="button" tabindex="0">
+                            Leave a Review
+                        </div>
+                    </div>
+                    <svg class="prev" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 50 50" tabindex="0">
+                        <circle id="arrow-dropleft-circle-background" cx="17.5" cy="17.5" r="17.5" transform="translate(7.32 7.688)" fill="#fff"/>
+                        <path id="arrow-dropleft-circle" data-name="arrow-dropleft-circle" d="M53.375,28.375a25,25,0,1,0-25,25A25,25,0,0,0,53.375,28.375Zm-32.692,0L32.221,16.837V39.913Z" transform="translate(-3.375 -3.375)" fill="#101010"/>
+                    </svg>
+                    <svg class="next" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" tabindex="0">
+                        <g id="arrow-dropright-circle" transform="translate(-543.605 -3155.688)">
+                          <circle id="arrow-dropleft-circle-background" cx="17.5" cy="17.5" r="17.5" transform="translate(553.605 3165.688)" fill="#fff"/>
+                          <path id="arrow-dropright-circle" data-name="arrow-dropright-circle" d="M30.875,58.375a27.5,27.5,0,1,0-27.5-27.5A27.5,27.5,0,0,0,30.875,58.375ZM26.644,43.567V18.183L39.337,30.875Z" transform="translate(540.23 3152.313)" fill="#101010"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="leave-a-review-container">
+                    <div class="leave-a-review-header">
+                        <div class="user-email">
+                            <label for="user-email-input">Email Address *</label>
+                            <textarea name="email-input" id="user-email-input" cols="30" rows="10" placeholder="Enter email here..."></textarea>
+                        </div>
+                        <div class="user-name">
+                            <label for="user-name-input">Name</label>
+                            <textarea name="name-input" id="user-name-input" cols="30" rows="10" placeholder="Enter name here..."></textarea>
+                        </div>
+                    </div>
+                    <div class="user-review">
+                        <label for="user-review-input">Review *</label>
+                        <textarea name="review-input" id="user-review-input" cols="30" rows="10" placeholder="Write review here..."></textarea>
+                    </div>
+                    <div class="send-button" role="button" tabindex="0">
+                        Send
+                    </div>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 55 55" tabindex="0">
+                        <path id="Icon_ionic-ios-close-circle" data-name="Icon ionic-ios-close-circle" d="M30.875,3.375a27.5,27.5,0,1,0,27.5,27.5A27.5,27.5,0,0,0,30.875,3.375Zm6.968,37.456-6.968-6.968-6.968,6.968a2.113,2.113,0,1,1-2.988-2.988l6.968-6.968-6.968-6.968a2.113,2.113,0,0,1,2.988-2.988l6.968,6.968,6.968-6.968a2.113,2.113,0,1,1,2.988,2.988l-6.968,6.968,6.968,6.968a2.123,2.123,0,0,1,0,2.988A2.1,2.1,0,0,1,37.843,40.831Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="above-footer">
+            <h2>Meet the Team</h2>
+            <div class="container">
+                <div class="frank">
+                    <img src="../static/images/frank-kaziputa.jpg" alt="Frank Kaziputa" id="photo">
+                    <h3>Frank Kaziputa</h3>
+                    <p>A passionate software engineer who thrives on the thrill of creating innovative solutions through code. My journey in software development has been marked by a deep commitment to tackling complex problems with elegant and efficient solutions.</p>
+                    <h4>Connect with me!</h4>
+                    <div class="socials-container">
+                        <img src="../static/icons/facebook-logo.svg" alt="Facebook Icon" id="socials">
+                        <img src="../static/icons/twitter-logo.svg" alt="Twitter Icon" id="socials">
+                        <img src="../static/icons/instagram-logo.svg" alt="Instagram Icon" id="socials">
+                        <img src="../static/icons/youtube-logo.svg" alt="Youtube Icon" id="socials">
+                        <img src="../static/icons/linkedin-logo.svg" alt="LinkedIn Icon" id="socials">
+                    </div>
+                </div>
+                <div class="dorcas">
+                    <img src="../static/images/oluwatosin-dorcas.jpeg" alt="Oluwatosin Dorcas" id="photo">
+                    <h3>Oluwatosin Dorcas</h3>
+                    <p>A passionate software engineer who thrives on the thrill of creating innovative solutions through code. My journey in software development has been marked by a deep commitment to tackling complex problems with elegant and efficient solutions.</p>
+                    <h4>Connect with me!</h4>
+                    <div class="socials-container">
+                        <img src="../static/icons/facebook-logo.svg" alt="Facebook Icon" id="socials">
+                        <img src="../static/icons/twitter-logo.svg" alt="Twitter Icon" id="socials">
+                        <img src="../static/icons/instagram-logo.svg" alt="Instagram Icon" id="socials">
+                        <img src="../static/icons/youtube-logo.svg" alt="Youtube Icon" id="socials">
+                        <img src="../static/icons/linkedin-logo.svg" alt="LinkedIn Icon" id="socials">
+                    </div>
+                </div>
+                <div class="joshua">
+                    <img src="../static/images/joshua-attah.png" alt="Joshua Attah" id="photo">
+                    <h3>Joshua Attah</h3>
+                    <p>A passionate software engineer who thrives on the thrill of creating innovative solutions through code. My journey in software development has been marked by a deep commitment to tackling complex problems with elegant and efficient solutions.</p>
+                    <h4>Connect with me!</h4>
+                    <div class="socials-container">
+                        <img src="../static/icons/facebook-logo.svg" alt="Facebook Icon" id="socials">
+                        <img src="../static/icons/twitter-logo.svg" alt="Twitter Icon" id="socials">
+                        <img src="../static/icons/instagram-logo.svg" alt="Instagram Icon" id="socials">
+                        <img src="../static/icons/youtube-logo.svg" alt="Youtube Icon" id="socials">
+                        <img src="../static/icons/linkedin-logo.svg" alt="LinkedIn Icon" id="socials">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright (c) 2023 KYM, All rights reserved.</p>
+        </footer>
+    </body>
+</html>

@@ -1,20 +1,177 @@
-header {
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #101010;
-    display: flex;
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    top: 0px;
-    padding: 1% 1%;
-}
+/* Main header */
+    header {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #101010;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        position: fixed !important;
+        z-index: 1;
+        top: 0 !important;
+        left: 0 !important;
+        padding: 10px 0;
+        overflow: visible;
+    }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
+    .logo {
+        display: flex;
+        align-items: center;
+        width: 190px;
+    }
 
-.logo img {
-    height: 100%;
-    margin-left: 30%;
-}
+    .logo img {
+        height: 100%;
+        margin-left: 50px;
+    }
+
+/* Header search */
+    .header-search-container {
+        display: flex;
+        align-items: center;
+        margin-left: 35%;
+        margin-right: 15%;
+        width: 230px;
+        flex-grow: 1;
+    }
+
+    .chevron-button-container {
+        position: relative;
+        z-index: 3;
+    }
+
+    .chevron-button {
+        background-color: #101010;
+        border: none;
+        border-radius: 2em 0 0 2em;
+        padding: 15px 1em;
+        cursor: pointer;
+    }
+
+    .chevron-button:hover {
+        background-color: #2A2A2A;
+        transition: 0.5s ease-out;
+    }
+
+    .chevron-button img {
+        width: 17px;
+        transition: transform 0.3s ease-out;
+    }
+
+    .chevron-button-dropdown {
+        visibility: hidden;
+        position: absolute;
+        top: 48px;
+        background-color: #101010;
+        color: #FFFFFF;
+        width: 10em;
+        padding: 0.8em;
+        border-radius: 0 0 1.5em 1.5em;
+        height: 0;
+        opacity: 0;
+    }
+
+        /* chevron-button js classes */
+        .chevron-button-dropdown.active {
+            visibility: visible;
+            height: 55px;
+            opacity: 1;
+            transition: height 0.5s ease-out, opacity 0.7s ease-in;
+        }
+
+        .chevron-button-dropdown .separator.active,
+        .chevron-button-dropdown input[type="radio"].active,
+        .chevron-button-dropdown label.active {
+            opacity: 1;
+            transition: opacity 1s ease-in;
+        }
+
+        .chevron-button img.rotate {
+            transform: rotate(180deg);
+        }
+
+        .chevron-button.radius {
+            border-radius: 2em 0 0 0;
+            transition: 0.3s ease-out;
+        }
+
+    .chevron-button-dropdown .separator {
+        opacity: 0;
+    }
+
+    .chevron-button-dropdown input[type="radio"] {
+        opacity: 0;
+    }
+
+    .chevron-button-dropdown label {
+        opacity: 0;
+    }
+
+    .input-search-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .search-input-header {
+        background-color: #707070;
+        color: #FFFFFF;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.05em;
+        padding: 13px 20px;
+        height: 22px;
+        flex-grow: 1;
+        resize: none;
+        white-space: nowrap;
+    }
+
+    .search-input-header::placeholder {
+        position: absolute;
+        left: 20px;
+        top: 14px;
+        color: #D1D1D1;
+    }
+
+    .search-input-header::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .search-button-header {
+        background-color: #101010;
+        border-radius: 0 3em 3em 0;
+        border: none;
+        color: #FFFFFF;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.2em;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-button-header:hover {
+        background-color: #2A2A2A;
+        transition: 0.5s ease-out;
+    }
+
+    .chevron-button-overlay {
+        position: fixed;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .chevron-button-overlay.active {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+    }
