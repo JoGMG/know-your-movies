@@ -436,6 +436,8 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
+        opacity: 0;
+        transition: opacity 2s ease;
     }
 
     .review-username {
@@ -464,6 +466,10 @@
 
         /* js transition class */
         .review-text-container.active {
+            opacity: 1;
+        }
+
+        .review-container-header.active {
             opacity: 1;
         }
 
