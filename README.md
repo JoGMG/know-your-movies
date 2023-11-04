@@ -26,7 +26,7 @@ To run this project locally, follow these steps:
 
 ### Installation Requirements
 
-- Python (version X.X)
+- Python (version 3.x.x)
 - List of dependencies (e.g., Flask, SQLAlchemy)
 
 ### Installation and Setup
