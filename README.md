@@ -4,9 +4,7 @@
 
 Welcome to "Know Your Movies," a project aimed at helping users discover movie casts with a simple click. Whether you're a movie enthusiast, student, content creator, or casting director, our platform provides a quick way to view the cast of a movie. No more struggling to remember actors' names – we've got you covered!
 
-Certainly, here's the project outline following the provided template:
-
-# Movie Cast Website Project
+Certainly, here's the project outline following the provided template.
 
 ## Overview
 
