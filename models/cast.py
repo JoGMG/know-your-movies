@@ -9,7 +9,7 @@ class Cast(BaseModel, Base):
     name = Column(
         String(128), nullable=False
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
-    movie_name = Column(
+    character = Column(
         String(128), nullable=False
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
     movie_id = Column(

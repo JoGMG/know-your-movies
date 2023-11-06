@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="arrow-dropright-circle" transform="translate(-543.605 -3155.688)">
+    <circle id="arrow-dropleft-circle-background" cx="17.5" cy="17.5" r="17.5" transform="translate(553.605 3165.688)" fill="#fff"/>
+    <path id="arrow-dropright-circle-2" data-name="arrow-dropright-circle" d="M30.875,58.375a27.5,27.5,0,1,0-27.5-27.5A27.5,27.5,0,0,0,30.875,58.375ZM26.644,43.567V18.183L39.337,30.875Z" transform="translate(540.23 3152.313)" fill="#101010"/>
+  </g>
+</svg>
