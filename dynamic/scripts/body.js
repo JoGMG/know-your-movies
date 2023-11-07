@@ -83,6 +83,40 @@ $(document).ready(() => {
         }
     });
 
+// Header search
+
+    // Implement actions when .chevron-button is clicked
+    $('.chevron-button').on('click keydown', (event) => {
+        if (event.type === 'click' || event.which === 13 || event.which === 32) {
+            event.preventDefault();
+            $('.chevron-button-dropdown').toggleClass('active');
+            $('.chevron-button-dropdown .separator, .chevron-button-dropdown input[type="radio"], .chevron-button-dropdown label').toggleClass('active');
+            $('.chevron-button img').toggleClass('rotate');
+            $('.chevron-button').toggleClass('radius');
+            $('.chevron-button-overlay').toggleClass('active');
+        }
+    });
+    // Hides .chevron-button-dropdown when clicked outside its container
+    $(document).click((event) => {
+        // Check if the clicked element is not inside .chevron-button-container
+        if (!$(event.target).closest('.chevron-button-container').length & !$(event.target).closest('.saviour')) {
+            // Hide .chevron-button-overlay and .chevron-button-dropdown
+            $('.chevron-button-dropdown').removeClass('active');
+            $('.chevron-button-dropdown .separator, .chevron-button-dropdown input[type="radio"], .chevron-button-dropdown label').removeClass('active');
+            $('.chevron-button img').removeClass('rotate');
+            $('.chevron-button').removeClass('radius');
+            $('.chevron-button-overlay').removeClass('active');
+        }
+    });
+
+    // Changes .search-input-header background-color on interaction
+    $('.search-input-header').on('focus', () => {
+        $('.search-input-header').addClass('input-color');
+    });
+    $('.search-input-header').on('blur', () => {
+        $('.search-input-header').removeClass('input-color');
+    });
+
     // Check if the current page is "searchresults_page.html"
     if (window.location.pathname.includes("searchresults_page.html")) {
 
@@ -122,11 +156,13 @@ $(document).ready(() => {
         const byQueryFromURL = urlParams.get('by');
 
         const searchQuery = searchQueryFromURL;
-        const headTitleContent = $('title').text();
-        $('title').text(`${searchQuery} - ` + headTitleContent + ' Search')
+        if (searchQuery !== null) {
+            const headTitleContent = $('title').text();
+            $('title').text(`${searchQuery} - ` + headTitleContent + ' Search')
 
-        const searchContainerH1content = $('.searchpage-container h1').text();
-        $('.searchpage-container h1').text(searchContainerH1content + `\'${searchQuery}\'`)
+            const searchContainerH1content = $('.searchpage-container h1').text();
+            $('.searchpage-container h1').text(searchContainerH1content + `\'${searchQuery}\'`)
+        }
 
         const searchQ = searchQuery.replace(/\s/g, "%20");
 
@@ -194,40 +230,6 @@ $(document).ready(() => {
                 });
         }
     }
-
-// Header search
-
-    // Implement actions when .chevron-button is clicked
-    $('.chevron-button').on('click keydown', (event) => {
-        if (event.type === 'click' || event.which === 13 || event.which === 32) {
-            event.preventDefault();
-            $('.chevron-button-dropdown').toggleClass('active');
-            $('.chevron-button-dropdown .separator, .chevron-button-dropdown input[type="radio"], .chevron-button-dropdown label').toggleClass('active');
-            $('.chevron-button img').toggleClass('rotate');
-            $('.chevron-button').toggleClass('radius');
-            $('.chevron-button-overlay').toggleClass('active');
-        }
-    });
-    // Hides .chevron-button-dropdown when clicked outside its container
-    $(document).click((event) => {
-        // Check if the clicked element is not inside .chevron-button-container
-        if (!$(event.target).closest('.chevron-button-container').length) {
-            // Hide .chevron-button-overlay and .chevron-button-dropdown
-            $('.chevron-button-dropdown').removeClass('active');
-            $('.chevron-button-dropdown .separator, .chevron-button-dropdown input[type="radio"], .chevron-button-dropdown label').removeClass('active');
-            $('.chevron-button img').removeClass('rotate');
-            $('.chevron-button').removeClass('radius');
-            $('.chevron-button-overlay').removeClass('active');
-        }
-    });
-
-    // Changes .search-input-header background-color on interaction
-    $('.search-input-header').on('focus', () => {
-        $('.search-input-header').addClass('input-color');
-    });
-    $('.search-input-header').on('blur', () => {
-        $('.search-input-header').removeClass('input-color');
-    });
 
 
 // Movies page

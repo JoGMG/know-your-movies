@@ -59,8 +59,9 @@
     justify-content: center;
 }
 
-#socials {
-    width: 15%;
+.socials-container svg:hover #path {
+    fill: #1FBFFB;
+    transition: 0.5s ease-out;
 }
 
 footer {
