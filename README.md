@@ -51,7 +51,7 @@ This project uses _TMDb API_ to retrieve movie information. There is no need to 
 The project utilizes the following technologies:
 
 - Front-End Technologies: HTML, CSS, JavaScript.
-- Back-End Language: Python.
+- Back-End Language: Python, JavaScript.
 - Library: Jquery.
 
 ## Contributors
