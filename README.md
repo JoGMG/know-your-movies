@@ -2,17 +2,19 @@
 
 ## Overview
 
-The Movie Cast Website Project is designed to provide users with a simple and efficient way to access information about the cast of their favorite movies. It offers a user-friendly interface for searching and displaying cast members, making it easy for movie enthusiasts to find out who starred in a particular film.
+The Movie Cast Website Project is designed to provide users with a simple and efficient way to access information about the cast of their favorite movies. It offers a simple user-friendly interface for searching movies and displaying movie cast members, making it easy for movie enthusiasts to find out who starred in a particular film.
 
 ## Features
 
-- **Movie Search by Title**: Users can search for a movie by its title, and the website will provide information about its cast.
+- **Movie Search by Title**: Users can search for a movie by its title, choose the particular movie they are looking for, and view information about the movie such as its release date, genre, summary, cast members and reviews.
 
-- **Displaying Cast Members**: The project displays the cast members for the selected movie, making it easy to identify the actors and actresses.
+- **Movie Search by Cast Name**: Users can search for a movie by a cast member's name, choose the particular movie they are looking for, and view information about the movie such as its release date, genre, summary, cast members and reviews.
+
+- **An Automatic + Manual Review SlideShow**: Users can view reviews about a movie on a container which changes every 5 seconds, equipped with a manual previous and next control button.
 
 - **Simple and Intuitive User Interface**: The website features a straightforward and user-friendly interface, ensuring a seamless user experience.
 
-- **Potential Future Features or Enhancements**: Future enhancements may include user reviews, additional movie details, and integration with popular movie databases.
+- **Potential Future Features or Enhancements**: Future enhancements may include website's responsiveness making it look more presentable for different screen sizes.
 
 ## Getting Started
 
@@ -20,48 +22,43 @@ To run this project locally, follow these steps:
 
 ### Installation Requirements
 
-- Python (version 3.x.x)
-- List of dependencies (e.g., Flask, SQLAlchemy)
+- A web browser
 
 ### Installation and Setup
 
 1. Clone the repository to your local machine.
 2. Navigate to the project's directory.
-3. Create a virtual environment using `python -m venv myenv`.
-4. Activate the virtual environment.
-5. Install the required dependencies using `pip install -r requirements.txt`.
-6. Run the application by executing `python app.py`.
+3. Open the dynamic folder.
+4. Open the home_page.html file in your browser.
+5. Enjoy!
 
 ### Usage
 
 To use the project:
 
-1. Open the web application in your browser.
+1. Open the home_page.html file in your browser.
 2. Enter the title of the movie you want to know more about in the search bar.
-3. Click the search button.
-4. The website will display the cast members of the selected movie.
+3. Click on the search button or press the Enter key on your keyboard when in the search input field.
+4. Select a movie from the list of search results.
+4. View information about the movie.
 
 ### API or Data Sources
 
-This project uses _ApiName_ to retrieve movie information. To access the API:
-
-- Endpoint: 
-- Authentication: 
-- API Key:
+This project uses _TMDb API_ to retrieve movie information. There is no need to obtain an API Authentication key to retrieve movie information. Use the project as it is. It works.
 
 ## Technologies Used
 
 The project utilizes the following technologies:
 
-- Front-end technologies: HTML, CSS, JavaScript
-- Back-end language: Python
-- Frameworks and libraries: Flask, SQLAlchemy
+- Front-End Technologies: HTML, CSS, JavaScript.
+- Back-End Language: Python.
+- Library: Jquery.
 
 ## Contributors
 
-- Frank Kaziputa - UX Designer
-- David Oluwatosin Dorcas - Front-End Developer
-- Joshua Attah - Back-End Developer
+- Frank Kaziputa - UX Designer [Github](https://github.com/madalafk)
+- David Oluwatosin Dorcas - Front-End Developer [Github](https://github.com/iamoluwafisayo)
+- Joshua Attah - Back-End Developer [Github](https://github.com/JoGMG)
 
 ## License
 
@@ -70,14 +67,5 @@ public
 ## Support or Contact
 
 If you have questions or need assistance, please contact us at joattah3@gmail.com. We are here to help!
-## Technologies Used
-
-- **Libraries**: jQuery (JavaScript library)
-- **Languages**: Python, MySQL, HTML, CSS, JS
-- **Framework**: Flask
-
-## License
-
-public
 
 ---
