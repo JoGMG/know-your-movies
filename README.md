@@ -6,7 +6,7 @@ The Movie Cast Website Project is designed to provide users with a simple and ef
 
 ## Features
 
-- **Movie Search by Name**: Users can search for a movie by its title, choose the particular movie they are looking for, and view information about the movie such as its release date, genre, summary, cast members and reviews.
+- **Movie Search by Name**: Users can search for a movie by its name, choose the particular movie they are looking for, and view information about the movie such as its release date, genre, summary, cast members and reviews.
 
 - **Movie Search by Cast Name**: Users can search for a movie by a cast member's name, choose the particular movie they are looking for, and view information about the movie such as its release date, genre, summary, cast members and reviews.
 
