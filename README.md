@@ -28,23 +28,23 @@ To run this project locally, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the project's directory.
-3. Open the dynamic folder.
-4. Open the home_page.html file in your browser.
+3. Open the `dynamic` folder.
+4. Open the `home_page.html` file in your browser.
 5. Enjoy!
 
 ### Usage
 
 To use the project:
 
-1. Open the home_page.html file in your browser.
+1. Open the `home_page.html` file in your browser.
 2. Enter the title of the movie you want to know more about in the search bar.
-3. Click on the search button or press the Enter key on your keyboard when in the search input field.
+3. Click on the `search` button or press the `Enter` key on your keyboard when in the search input field.
 4. Select a movie from the list of search results.
 4. View information about the movie.
 
 ### API or Data Sources
 
-This project uses _TMDb API_ to retrieve movie information. There is no need to obtain an API Authentication key to retrieve movie information. Use the project as it is. It works.
+This project uses _TMDb API_ to retrieve movie information. There is no need to obtain an API Authentication key to use the project. It works fine as it is.
 
 ## Technologies Used
 
