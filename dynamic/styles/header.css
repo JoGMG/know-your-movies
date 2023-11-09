@@ -26,6 +26,27 @@
         cursor: pointer;
     }
 
+    .intro-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #101010;
+        border-radius: 30px;
+        height: 40px;
+        padding: 0px 20px;
+        margin-top: 10px;
+        margin-right: 50px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .intro-page:hover {
+        background-color: #2A2A2A;
+        transition: 0.5s ease-out;
+    }
+
 /* Header search */
     .header-search-container {
         display: flex;
@@ -150,6 +171,7 @@
         padding: 0 15px;
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
 
     .search-button-header:hover {
