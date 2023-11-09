@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Intro - Know Your Movies (KYM)</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Major+Mono+Display:400&display=swap' rel='stylesheet'>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            header {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #101010;
+                width: 100%;
+                height: 60px;
+            }
+
+            .proj-kym {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: 50px;
+                background-color: #101010;
+                border-radius: 30px;
+                padding: 10px 20px;
+                font-weight: 400;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+
+            .heading {
+                margin-top: 70px;
+                height: 570px;
+                background-image: url(./dynamic/images/intro-kym.png);
+                background-repeat: no-repeat;
+            }
+
+            .features {
+                color: #292929;
+                text-align: center;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                background-color: #e0e0e0;
+            }
+
+            .h2 {
+                font-family: 'Major Mono Display', sans-serif;
+                font-size: 2.5em;
+                margin-bottom: 50px;
+            }
+
+            .features-items {
+                display: flex;
+                justify-content: space-between;
+                justify-content: space-around;
+            }
+
+            .one, .two {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                font-weight: 400;
+                width: 400px;
+                font-weight: 300;
+                line-height: 1.3em;
+            }
+
+            .one .name, .two .name {
+                font-size: 1.3em;
+                margin-bottom: 15px;
+            }
+
+            .one img, .two img {
+                width: 400px;
+            }
+
+            .about {
+                color: #d6d6d6;
+                text-align: center;
+                background-color: #404040;
+                padding: 100px 100px;
+                font-weight: 300;
+                line-height: 1.3em;
+            }
+
+            .about-footer {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .socials {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .proj-repo p, .socials p {
+                margin-bottom: 0;
+            }
+
+            .team .p {
+                margin-bottom: 10px;
+            }
+
+            .dorcas {
+                border-left: 1px solid #d6d6d6;
+                border-right: 1px solid #d6d6d6;
+                padding-left: 10px;
+                margin-left: 10px;
+                padding-right: 10px;
+                margin-right: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <a class="proj-kym" href="https://jogmg.github.io/know-your-movies/dynamic/home_page.html">
+                <div title="Go to KYM's Project Landing Page" role="button" tabindex="0">
+                    Project KYM
+                </div>
+            </a>
+        </header>
+        <div class="heading"></div>
+        <div class="features">
+            <div class="h2">Features</div>
+            <div class="features-items">
+                <div class="one">
+                    <span class="name">The Search By Feature</span>
+                    <img src="./dynamic/gifs/search-by-feature.gif" alt="search by feature gif">
+                    <p>This feature enable users to search for a movie by movie name or cast name.</p>
+                </div>
+                <div class="two">
+                    <span class="name">The Movie Reviews Feature</span>
+                    <img src="./dynamic/gifs/movie-reviews feature.gif" alt="movie reviews feature gif">
+                    <p>There is a review container below every movie, just above the footer, which displays the reviews of that particular movie. The cool thing is it automatically changes every 5 secs and stops on hover. There is also a previous and next control button.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="h2">About</div>
+            <p>
+                We all love movies, whether our team has a greater love for movies is a topic up for debate.<br>
+                Despite the fact that one of us prefers Korean movies to American movies, our collective love for movies was and still is a source of inspiration which brought us together to create a solution focused on movie casts, influenced by the vast and often complex nature of the movies industry today.<br>
+                We believe offering an extensive service that cuts across all aspects of movies can be complicated, often overwhelming users, leading to a bad user experience.<br>
+                Therefore, basing our solution on a single focus (movie cast), we aim to create a simpler and more user-friendly platform where users can easily access the precise information they seek without unnecessary complexity.
+            </p>
+            <p>
+                This is an ALX SE Portfolio Project. Timeline: Oct 20, 2023 - Nov 9, 2023.
+            </p>
+            <div class="about-footer">
+                <div class="proj-repo">
+                    <p>KYM's Github Repository</p>
+                    <a href="https://github.com/JoGMG/know-your-movies">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.964 80.964">
+                            <g id="github-icon" transform="translate(-1705.7 -2978.017)">
+                                <circle id="path" cx="28.625" cy="28.625" r="28.625" transform="translate(1705.7 3018.499) rotate(-45)" fill="#fff"/>
+                                <path id="Icon_awesome-github" data-name="Icon awesome-github" d="M13.339,31.872c0,.161-.185.289-.418.289-.265.024-.45-.1-.45-.289,0-.161.185-.289.418-.289C13.13,31.558,13.339,31.687,13.339,31.872Zm-2.5-.362c-.056.161.1.346.346.394a.377.377,0,0,0,.5-.161c.048-.161-.1-.346-.346-.418A.413.413,0,0,0,10.838,31.51Zm3.554-.137c-.233.056-.394.209-.37.394.024.161.233.265.474.209s.394-.209.37-.37S14.625,31.349,14.392,31.373ZM19.683.563A19.28,19.28,0,0,0,0,20.181,20.158,20.158,0,0,0,13.628,39.413c1.029.185,1.391-.45,1.391-.973,0-.5-.024-3.248-.024-4.937,0,0-5.628,1.206-6.81-2.4,0,0-.917-2.34-2.235-2.943,0,0-1.841-1.262.129-1.238A4.244,4.244,0,0,1,9.182,29c1.761,3.1,4.712,2.211,5.861,1.68a4.469,4.469,0,0,1,1.286-2.71c-4.495-.5-9.029-1.15-9.029-8.885a6.094,6.094,0,0,1,1.9-4.736,7.6,7.6,0,0,1,.209-5.459c1.68-.523,5.548,2.171,5.548,2.171a18.995,18.995,0,0,1,10.1,0s3.867-2.7,5.548-2.171a7.593,7.593,0,0,1,.209,5.459,6.25,6.25,0,0,1,2.074,4.736c0,7.759-4.736,8.378-9.23,8.885A4.755,4.755,0,0,1,25.021,31.7c0,2.71-.024,6.062-.024,6.722,0,.523.37,1.158,1.391.973A19.972,19.972,0,0,0,39.88,20.181C39.88,9.029,30.835.563,19.683.563ZM7.815,28.294c-.1.08-.08.265.056.418.129.129.314.185.418.08.1-.08.08-.265-.056-.418C8.1,28.245,7.92,28.189,7.815,28.294Zm-.868-.651c-.056.1.024.233.185.314a.239.239,0,0,0,.346-.056c.056-.1-.024-.233-.185-.314C7.132,27.538,7,27.562,6.947,27.642ZM9.552,30.5c-.129.1-.08.346.1.5.185.185.418.209.523.08.1-.1.056-.346-.1-.5C9.9,30.4,9.656,30.376,9.552,30.5Zm-.917-1.182c-.129.08-.129.289,0,.474s.346.265.45.185a.367.367,0,0,0,0-.5C8.973,29.3,8.764,29.218,8.635,29.323Z" transform="translate(1726.242 2998.495)"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="team">
+                    <p class="p">Team KYM</p>
+                    <div class="socials">
+                        <div class="frank">
+                            <p>Frank Kaziputa</p>
+                            <div class="socials-container">
+                                <a href="https://twitter.com/frank_madala">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.96 80.96">
+                                        <g id="Twitter_Logo" data-name="Twitter Logo" transform="translate(-1455.742 -117.539)">
+                                            <circle id="path" data-name="Ellipse 13" cx="28.624" cy="28.624" r="28.624" transform="translate(1455.742 158.019) rotate(-45)" fill="#fff"/>
+                                            <path id="Path_8" data-name="Path 8" d="M1656.326,334.858c-1.411-7.428,7.521-11.847,12.787-6.487a18.82,18.82,0,0,0,4.419-1.974,8.133,8.133,0,0,1-3.291,4.137,14.01,14.01,0,0,0,4.043-1.128,7.858,7.858,0,0,1-3.479,3.479c1.222,17.018-17.112,27.36-31.967,18.9,0,0,7.334.376,10.436-3.2,0,0-4.513.376-6.77-5.077a4.535,4.535,0,0,0,3.385-.188s-5.266-.846-5.736-7.145a4.635,4.635,0,0,0,3.573.846s-5.829-3.479-2.539-9.778c0,0,6.205,7.9,15.137,7.616Z" transform="translate(-159.787 -181.927)" fill="#101010" fill-rule="evenodd"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="http://www.linkedin.com/in/frank-madala">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.96 80.96">
+                                        <g id="LinkedIn_Logo" data-name="LinkedIn Logo" transform="translate(-2104.078 -721.496)">
+                                            <circle id="path" data-name="Ellipse 11" cx="28.624" cy="28.624" r="28.624" transform="translate(2104.078 761.976) rotate(-45)" fill="#fff"/>
+                                            <path id="Path_5" data-name="Path 5" d="M2292.642,919.058h6.446V940.7h-6.446Zm3.184-10.983a3.9,3.9,0,0,1,0,7.8,3.9,3.9,0,0,1,0-7.8Zm7.082,10.983h6.367v3.024a7.368,7.368,0,0,1,6.128-3.263h1.751a7.353,7.353,0,0,1,7.321,7.322V940.7h-6.367v-1.99h0v-9.709h0a4.232,4.232,0,0,0-4.217-4.377h0a4.573,4.573,0,0,0-4.616,4.377h0v11.7h-6.367Z" transform="translate(-164.003 -162.828)" fill="#101010" fill-rule="evenodd"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/madalafk">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.964 80.964">
+                                        <g id="github-icon" transform="translate(-1705.7 -2978.017)">
+                                            <circle id="path" cx="28.625" cy="28.625" r="28.625" transform="translate(1705.7 3018.499) rotate(-45)" fill="#fff"/>
+                                            <path id="Icon_awesome-github" data-name="Icon awesome-github" d="M13.339,31.872c0,.161-.185.289-.418.289-.265.024-.45-.1-.45-.289,0-.161.185-.289.418-.289C13.13,31.558,13.339,31.687,13.339,31.872Zm-2.5-.362c-.056.161.1.346.346.394a.377.377,0,0,0,.5-.161c.048-.161-.1-.346-.346-.418A.413.413,0,0,0,10.838,31.51Zm3.554-.137c-.233.056-.394.209-.37.394.024.161.233.265.474.209s.394-.209.37-.37S14.625,31.349,14.392,31.373ZM19.683.563A19.28,19.28,0,0,0,0,20.181,20.158,20.158,0,0,0,13.628,39.413c1.029.185,1.391-.45,1.391-.973,0-.5-.024-3.248-.024-4.937,0,0-5.628,1.206-6.81-2.4,0,0-.917-2.34-2.235-2.943,0,0-1.841-1.262.129-1.238A4.244,4.244,0,0,1,9.182,29c1.761,3.1,4.712,2.211,5.861,1.68a4.469,4.469,0,0,1,1.286-2.71c-4.495-.5-9.029-1.15-9.029-8.885a6.094,6.094,0,0,1,1.9-4.736,7.6,7.6,0,0,1,.209-5.459c1.68-.523,5.548,2.171,5.548,2.171a18.995,18.995,0,0,1,10.1,0s3.867-2.7,5.548-2.171a7.593,7.593,0,0,1,.209,5.459,6.25,6.25,0,0,1,2.074,4.736c0,7.759-4.736,8.378-9.23,8.885A4.755,4.755,0,0,1,25.021,31.7c0,2.71-.024,6.062-.024,6.722,0,.523.37,1.158,1.391.973A19.972,19.972,0,0,0,39.88,20.181C39.88,9.029,30.835.563,19.683.563ZM7.815,28.294c-.1.08-.08.265.056.418.129.129.314.185.418.08.1-.08.08-.265-.056-.418C8.1,28.245,7.92,28.189,7.815,28.294Zm-.868-.651c-.056.1.024.233.185.314a.239.239,0,0,0,.346-.056c.056-.1-.024-.233-.185-.314C7.132,27.538,7,27.562,6.947,27.642ZM9.552,30.5c-.129.1-.08.346.1.5.185.185.418.209.523.08.1-.1.056-.346-.1-.5C9.9,30.4,9.656,30.376,9.552,30.5Zm-.917-1.182c-.129.08-.129.289,0,.474s.346.265.45.185a.367.367,0,0,0,0-.5C8.973,29.3,8.764,29.218,8.635,29.323Z" transform="translate(1726.242 2998.495)"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dorcas">
+                            <p>Oluwatosin Dorcas</p>
+                            <div class="socials-container">
+                                <a href="https://x.com/bosede_david13">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.96 80.96">
+                                        <g id="Twitter_Logo" data-name="Twitter Logo" transform="translate(-1455.742 -117.539)">
+                                            <circle id="path" data-name="Ellipse 13" cx="28.624" cy="28.624" r="28.624" transform="translate(1455.742 158.019) rotate(-45)" fill="#fff"/>
+                                            <path id="Path_8" data-name="Path 8" d="M1656.326,334.858c-1.411-7.428,7.521-11.847,12.787-6.487a18.82,18.82,0,0,0,4.419-1.974,8.133,8.133,0,0,1-3.291,4.137,14.01,14.01,0,0,0,4.043-1.128,7.858,7.858,0,0,1-3.479,3.479c1.222,17.018-17.112,27.36-31.967,18.9,0,0,7.334.376,10.436-3.2,0,0-4.513.376-6.77-5.077a4.535,4.535,0,0,0,3.385-.188s-5.266-.846-5.736-7.145a4.635,4.635,0,0,0,3.573.846s-5.829-3.479-2.539-9.778c0,0,6.205,7.9,15.137,7.616Z" transform="translate(-159.787 -181.927)" fill="#101010" fill-rule="evenodd"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/oluwatosin-david-401a15285">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.96 80.96">
+                                        <g id="LinkedIn_Logo" data-name="LinkedIn Logo" transform="translate(-2104.078 -721.496)">
+                                            <circle id="path" data-name="Ellipse 11" cx="28.624" cy="28.624" r="28.624" transform="translate(2104.078 761.976) rotate(-45)" fill="#fff"/>
+                                            <path id="Path_5" data-name="Path 5" d="M2292.642,919.058h6.446V940.7h-6.446Zm3.184-10.983a3.9,3.9,0,0,1,0,7.8,3.9,3.9,0,0,1,0-7.8Zm7.082,10.983h6.367v3.024a7.368,7.368,0,0,1,6.128-3.263h1.751a7.353,7.353,0,0,1,7.321,7.322V940.7h-6.367v-1.99h0v-9.709h0a4.232,4.232,0,0,0-4.217-4.377h0a4.573,4.573,0,0,0-4.616,4.377h0v11.7h-6.367Z" transform="translate(-164.003 -162.828)" fill="#101010" fill-rule="evenodd"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/iamoluwafisayo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.964 80.964">
+                                        <g id="github-icon" transform="translate(-1705.7 -2978.017)">
+                                            <circle id="path" cx="28.625" cy="28.625" r="28.625" transform="translate(1705.7 3018.499) rotate(-45)" fill="#fff"/>
+                                            <path id="Icon_awesome-github" data-name="Icon awesome-github" d="M13.339,31.872c0,.161-.185.289-.418.289-.265.024-.45-.1-.45-.289,0-.161.185-.289.418-.289C13.13,31.558,13.339,31.687,13.339,31.872Zm-2.5-.362c-.056.161.1.346.346.394a.377.377,0,0,0,.5-.161c.048-.161-.1-.346-.346-.418A.413.413,0,0,0,10.838,31.51Zm3.554-.137c-.233.056-.394.209-.37.394.024.161.233.265.474.209s.394-.209.37-.37S14.625,31.349,14.392,31.373ZM19.683.563A19.28,19.28,0,0,0,0,20.181,20.158,20.158,0,0,0,13.628,39.413c1.029.185,1.391-.45,1.391-.973,0-.5-.024-3.248-.024-4.937,0,0-5.628,1.206-6.81-2.4,0,0-.917-2.34-2.235-2.943,0,0-1.841-1.262.129-1.238A4.244,4.244,0,0,1,9.182,29c1.761,3.1,4.712,2.211,5.861,1.68a4.469,4.469,0,0,1,1.286-2.71c-4.495-.5-9.029-1.15-9.029-8.885a6.094,6.094,0,0,1,1.9-4.736,7.6,7.6,0,0,1,.209-5.459c1.68-.523,5.548,2.171,5.548,2.171a18.995,18.995,0,0,1,10.1,0s3.867-2.7,5.548-2.171a7.593,7.593,0,0,1,.209,5.459,6.25,6.25,0,0,1,2.074,4.736c0,7.759-4.736,8.378-9.23,8.885A4.755,4.755,0,0,1,25.021,31.7c0,2.71-.024,6.062-.024,6.722,0,.523.37,1.158,1.391.973A19.972,19.972,0,0,0,39.88,20.181C39.88,9.029,30.835.563,19.683.563ZM7.815,28.294c-.1.08-.08.265.056.418.129.129.314.185.418.08.1-.08.08-.265-.056-.418C8.1,28.245,7.92,28.189,7.815,28.294Zm-.868-.651c-.056.1.024.233.185.314a.239.239,0,0,0,.346-.056c.056-.1-.024-.233-.185-.314C7.132,27.538,7,27.562,6.947,27.642ZM9.552,30.5c-.129.1-.08.346.1.5.185.185.418.209.523.08.1-.1.056-.346-.1-.5C9.9,30.4,9.656,30.376,9.552,30.5Zm-.917-1.182c-.129.08-.129.289,0,.474s.346.265.45.185a.367.367,0,0,0,0-.5C8.973,29.3,8.764,29.218,8.635,29.323Z" transform="translate(1726.242 2998.495)"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="joshua">
+                            <p>Joshua Attah</p>
+                            <div class="socials-container">
+                                <a href="https://twitter.com/That_JoGMG">
+                                    <svg id="twitter" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.96 80.96">
+                                        <g id="Twitter_Logo" data-name="Twitter Logo" transform="translate(-1455.742 -117.539)">
+                                            <circle id="path" data-name="Ellipse 13" cx="28.624" cy="28.624" r="28.624" transform="translate(1455.742 158.019) rotate(-45)" fill="#fff"/>
+                                            <path id="Path_8" data-name="Path 8" d="M1656.326,334.858c-1.411-7.428,7.521-11.847,12.787-6.487a18.82,18.82,0,0,0,4.419-1.974,8.133,8.133,0,0,1-3.291,4.137,14.01,14.01,0,0,0,4.043-1.128,7.858,7.858,0,0,1-3.479,3.479c1.222,17.018-17.112,27.36-31.967,18.9,0,0,7.334.376,10.436-3.2,0,0-4.513.376-6.77-5.077a4.535,4.535,0,0,0,3.385-.188s-5.266-.846-5.736-7.145a4.635,4.635,0,0,0,3.573.846s-5.829-3.479-2.539-9.778c0,0,6.205,7.9,15.137,7.616Z" transform="translate(-159.787 -181.927)" fill="#101010" fill-rule="evenodd"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/joattah">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.96 80.96">
+                                        <g id="LinkedIn_Logo" data-name="LinkedIn Logo" transform="translate(-2104.078 -721.496)">
+                                            <circle id="path" data-name="Ellipse 11" cx="28.624" cy="28.624" r="28.624" transform="translate(2104.078 761.976) rotate(-45)" fill="#fff"/>
+                                            <path id="Path_5" data-name="Path 5" d="M2292.642,919.058h6.446V940.7h-6.446Zm3.184-10.983a3.9,3.9,0,0,1,0,7.8,3.9,3.9,0,0,1,0-7.8Zm7.082,10.983h6.367v3.024a7.368,7.368,0,0,1,6.128-3.263h1.751a7.353,7.353,0,0,1,7.321,7.322V940.7h-6.367v-1.99h0v-9.709h0a4.232,4.232,0,0,0-4.217-4.377h0a4.573,4.573,0,0,0-4.616,4.377h0v11.7h-6.367Z" transform="translate(-164.003 -162.828)" fill="#101010" fill-rule="evenodd"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/JoGMG">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 80.964 80.964">
+                                        <g id="github-icon" transform="translate(-1705.7 -2978.017)">
+                                            <circle id="path" cx="28.625" cy="28.625" r="28.625" transform="translate(1705.7 3018.499) rotate(-45)" fill="#fff"/>
+                                            <path id="Icon_awesome-github" data-name="Icon awesome-github" d="M13.339,31.872c0,.161-.185.289-.418.289-.265.024-.45-.1-.45-.289,0-.161.185-.289.418-.289C13.13,31.558,13.339,31.687,13.339,31.872Zm-2.5-.362c-.056.161.1.346.346.394a.377.377,0,0,0,.5-.161c.048-.161-.1-.346-.346-.418A.413.413,0,0,0,10.838,31.51Zm3.554-.137c-.233.056-.394.209-.37.394.024.161.233.265.474.209s.394-.209.37-.37S14.625,31.349,14.392,31.373ZM19.683.563A19.28,19.28,0,0,0,0,20.181,20.158,20.158,0,0,0,13.628,39.413c1.029.185,1.391-.45,1.391-.973,0-.5-.024-3.248-.024-4.937,0,0-5.628,1.206-6.81-2.4,0,0-.917-2.34-2.235-2.943,0,0-1.841-1.262.129-1.238A4.244,4.244,0,0,1,9.182,29c1.761,3.1,4.712,2.211,5.861,1.68a4.469,4.469,0,0,1,1.286-2.71c-4.495-.5-9.029-1.15-9.029-8.885a6.094,6.094,0,0,1,1.9-4.736,7.6,7.6,0,0,1,.209-5.459c1.68-.523,5.548,2.171,5.548,2.171a18.995,18.995,0,0,1,10.1,0s3.867-2.7,5.548-2.171a7.593,7.593,0,0,1,.209,5.459,6.25,6.25,0,0,1,2.074,4.736c0,7.759-4.736,8.378-9.23,8.885A4.755,4.755,0,0,1,25.021,31.7c0,2.71-.024,6.062-.024,6.722,0,.523.37,1.158,1.391.973A19.972,19.972,0,0,0,39.88,20.181C39.88,9.029,30.835.563,19.683.563ZM7.815,28.294c-.1.08-.08.265.056.418.129.129.314.185.418.08.1-.08.08-.265-.056-.418C8.1,28.245,7.92,28.189,7.815,28.294Zm-.868-.651c-.056.1.024.233.185.314a.239.239,0,0,0,.346-.056c.056-.1-.024-.233-.185-.314C7.132,27.538,7,27.562,6.947,27.642ZM9.552,30.5c-.129.1-.08.346.1.5.185.185.418.209.523.08.1-.1.056-.346-.1-.5C9.9,30.4,9.656,30.376,9.552,30.5Zm-.917-1.182c-.129.08-.129.289,0,.474s.346.265.45.185a.367.367,0,0,0,0-.5C8.973,29.3,8.764,29.218,8.635,29.323Z" transform="translate(1726.242 2998.495)"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
