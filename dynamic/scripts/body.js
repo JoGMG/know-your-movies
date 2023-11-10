@@ -99,7 +99,7 @@ $(document).ready(() => {
     // Hides .chevron-button-dropdown when clicked outside its container
     $(document).click((event) => {
         // Check if the clicked element is not inside .chevron-button-container
-        if (!$(event.target).closest('.chevron-button-container').length & !$(event.target).closest('.saviour')) {
+        if (!$(event.target).closest('.chevron-button-container').length && !$(event.target).closest('.saviour').length) {
             // Hide .chevron-button-overlay and .chevron-button-dropdown
             $('.chevron-button-dropdown').removeClass('active');
             $('.chevron-button-dropdown .separator, .chevron-button-dropdown input[type="radio"], .chevron-button-dropdown label').removeClass('active');
@@ -207,23 +207,25 @@ $(document).ready(() => {
                     response.results.forEach((data) => {
                         if (data.known_for_department === 'Acting') {
                             data.known_for.forEach((innerData) => {
-                                base_url = "https://image.tmdb.org/t/p/w500";
-                                const poster = base_url + innerData.poster_path;
-                                const title = innerData.title;
-                                const date = innerData.release_date;
-                                const id = innerData.id;
-
-                                const newdate = date.split('-')[0];
-
-                                const movieContainer = $('.movie-container');
-                                const movieItem = $('<div>').addClass('movie').attr({"tabindex": "0", "data-id": `${id}`});
-
-                                const moviePoster = $('<div>').addClass('movie-poster').html(`<img src="${poster}" alt="${title} poster" onerror="this.src='../dynamic/images/poster-placeholder.png'; this.removeAttribute('alt');"></img>`);
-                                const movieTitle = $('<div>').addClass('movie-title').attr({"title": `${title}`}).text(`${title}`);
-                                const movieDate = $('<div>').addClass('movie-date').text(`${newdate || '-'}`);
-
-                                movieItem.append(moviePoster).append(movieTitle).append(movieDate);
-                                movieContainer.append(movieItem);
+                                if (innerData.title !== undefined) {
+                                    base_url = "https://image.tmdb.org/t/p/w500";
+                                    const poster = base_url + innerData.poster_path;
+                                    const title = innerData.title;
+                                    const date = innerData.release_date;
+                                    const id = innerData.id;
+    
+                                    const newdate = date.split('-')[0];
+    
+                                    const movieContainer = $('.movie-container');
+                                    const movieItem = $('<div>').addClass('movie').attr({"tabindex": "0", "data-id": `${id}`});
+    
+                                    const moviePoster = $('<div>').addClass('movie-poster').html(`<img src="${poster}" alt="${title} poster" onerror="this.src='../dynamic/images/poster-placeholder.png'; this.removeAttribute('alt');"></img>`);
+                                    const movieTitle = $('<div>').addClass('movie-title').attr({"title": `${title}`}).text(`${title}`);
+                                    const movieDate = $('<div>').addClass('movie-date').text(`${newdate || '-'}`);
+    
+                                    movieItem.append(moviePoster).append(movieTitle).append(movieDate);
+                                    movieContainer.append(movieItem);
+                                }
                             });
                         }
                     });
@@ -321,18 +323,20 @@ $(document).ready(() => {
             .then(response => response.json())
             .then(response => {
                 response.cast.forEach((data) => {
-                    base_url = "https://image.tmdb.org/t/p/w500";
-                    const profile = base_url + data.profile_path;
-                    const name = data.name;
-                    const character = data.character;
-
-                    const cast = $('<div>').addClass('cast');
-
-                    const castHeadShot = $('<div>').addClass('cast-headshot').html(`<img src="${profile}" alt="${name} headshot" onerror="this.src='../dynamic/images/headshot-placeholder.png'; this.removeAttribute('alt');">`)
-                    const castName = $('<div>').addClass('cast-name').attr({"title": `${name} as ${character}`}).html(`${name}<p><span>as </span>${character}</p>`)
-
-                    const allCast = cast.append(castHeadShot).append(castName)
-                    $('.cast-container').append(allCast)
+                    if (data.known_for_department === 'Acting') {
+                        base_url = "https://image.tmdb.org/t/p/w500";
+                        const profile = base_url + data.profile_path;
+                        const name = data.name;
+                        const character = data.character;
+    
+                        const cast = $('<div>').addClass('cast');
+    
+                        const castHeadShot = $('<div>').addClass('cast-headshot').html(`<img src="${profile}" alt="${name} headshot" onerror="this.src='../dynamic/images/headshot-placeholder.png'; this.removeAttribute('alt');">`)
+                        const castName = $('<div>').addClass('cast-name').attr({"title": `${name} as ${character}`}).html(`${name}<p><span>as </span>${character}</p>`)
+    
+                        const allCast = cast.append(castHeadShot).append(castName)
+                        $('.cast-container').append(allCast)
+                    }
                 });
 
             });
