@@ -2,7 +2,7 @@
 
 ## Overview
 
-KYM is a Movie Cast Discovery Website Project, designed to provide users with a simple and efficient way to access information about the cast of their favorite movies. It offers a simple user-friendly interface for searching movies and displaying its cast members, making it easy for movie enthusiasts to find out who starred in a particular film.<br><br>
+KYM is a Movie Cast Discovery Website, designed to provide users with a simple and efficient way to access information about the cast of their favorite movies. It offers a simple user-friendly interface for searching movies and displaying its cast members, making it easy for movie enthusiasts to find out who starred in a particular film.<br><br>
 [Go to Project's Landing Page](https://jogmg.github.io/know-your-movies)
 
 ## Features
@@ -15,7 +15,7 @@ KYM is a Movie Cast Discovery Website Project, designed to provide users with a 
 
 - **Simple and Intuitive User Interface**: The website features a straightforward and user-friendly interface, ensuring a seamless user experience.
 
-- **Potential Future Features or Enhancements**: Future enhancements may include website's responsiveness making it look more presentable for different screen sizes.
+- **Potential Future Features or Enhancements**: Future enhancements may include making the website look more presentable for different screen sizes, and implementing a reviews REST API so that the `Leave a Review` feature will become functional.
 
 ## Getting Started
 
@@ -61,7 +61,7 @@ The project utilizes the following technologies:
 - David Oluwatosin Dorcas - Front-End Developer [Github](https://github.com/iamoluwafisayo)
 - Joshua Attah - Back-End Developer [Github](https://github.com/JoGMG)<br><br>
 Feel like there's something missing that you can add? You are welcome to contribute to the project.<br>
-All you have to do is fork the project's repository, make your contribution and submit a new pull request.
+All you have to do is fork the project's repository, make your contributions and submit a new pull request.
 
 ## License
 
