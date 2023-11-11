@@ -1,8 +1,9 @@
-# Know Your Movies - Movie Cast Discovery
+# Know Your Movies (KYM)
 
 ## Overview
 
-The Movie Cast Website Project is designed to provide users with a simple and efficient way to access information about the cast of their favorite movies. It offers a simple user-friendly interface for searching movies and displaying movie cast members, making it easy for movie enthusiasts to find out who starred in a particular film.
+KYM is a Movie Cast Discovery Website Project, designed to provide users with a simple and efficient way to access information about the cast of their favorite movies. It offers a simple user-friendly interface for searching movies and displaying its cast members, making it easy for movie enthusiasts to find out who starred in a particular film.<br><br>
+[Go to Project's Landing Page](https://jogmg.github.io/know-your-movies)
 
 ## Features
 
@@ -58,7 +59,8 @@ The project utilizes the following technologies:
 
 - Frank Kaziputa - UX Designer [Github](https://github.com/madalafk)
 - David Oluwatosin Dorcas - Front-End Developer [Github](https://github.com/iamoluwafisayo)
-- Joshua Attah - Back-End Developer [Github](https://github.com/JoGMG)
+- Joshua Attah - Back-End Developer [Github](https://github.com/JoGMG)<br><br>
+Anyone is welcome to contribute to the project.
 
 ## License
 
