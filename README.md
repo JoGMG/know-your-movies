@@ -3,7 +3,7 @@
 ## Overview
 
 KYM is a Movie Cast Discovery Website, designed to provide users with a simple and efficient way to view and discover the cast of their favorite movies. It offers a simple user-friendly interface for searching movies and displaying its details, making it easy for movie enthusiasts to find out who starred in a particular film.<br><br>
-[Go to Project's Landing Page](https://jogmg.github.io/know-your-movies)
+[Go to KYM Landing Page](https://jogmg.github.io/know-your-movies)
 
 ## Features
 
