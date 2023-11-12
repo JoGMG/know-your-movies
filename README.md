@@ -15,7 +15,7 @@ KYM is a Movie Cast Discovery Website, designed to provide users with a simple a
 
 - **Simple and Intuitive User Interface**: The website features a straightforward and user-friendly interface, ensuring a seamless user experience.
 
-- **Potential Future Features or Enhancements**: Future enhancements may include making the website look more presentable for different screen sizes, and implementing a reviews REST API so that the `Leave a Review` feature will become functional.
+- **Potential Future Features or Enhancements**: Future enhancements may include making the website responsive to different screen sizes, and implementing a reviews REST API so that the `Leave a Review` feature will become functional.
 
 ## Getting Started
 
@@ -51,8 +51,8 @@ This project uses _TMDb API_ to retrieve movie information. There is no need to 
 
 The project utilizes the following technologies:
 
-- Front-End Technologies: HTML, CSS, JavaScript.
-- Back-End Language: Python, JavaScript.
+- Frontend: HTML, CSS, JavaScript.
+- Backend: Python, JavaScript.
 - Library: Jquery.
 
 ## Contributors
