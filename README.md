@@ -1,4 +1,4 @@
-# Know Your Movies (KYM)
+# Know Your Movies (KYM) ![KYM Logo](./dynamic/icons/kym-logo-transparent.svg)
 
 ## Overview
 
