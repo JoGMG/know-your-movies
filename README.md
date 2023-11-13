@@ -1,4 +1,4 @@
-<img align="left" width="100" height="100" src="./dynamic/icons/kym-logo-transparent-white.svg">
+<img align="right" width="100" height="100" src="./dynamic/icons/kym-logo-transparent-white.svg">
 
 # Know Your Movies (KYM)
 
