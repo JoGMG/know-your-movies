@@ -1,4 +1,6 @@
-# Know Your Movies (KYM) ![KYM Logo](./dynamic/icons/kym-logo-transparent-white.svg) >
+<img align="left" width="100" height="100" src="./dynamic/icons/kym-logo-transparent-white.svg">
+
+# Know Your Movies (KYM)
 
 ## Overview
 
