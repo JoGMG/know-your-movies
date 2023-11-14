@@ -1,23 +1,6 @@
 $(document).ready(() => {
 // Home page.
 
-    // Implement actions when search-by is clicked.
-    $('.search-by').on('click keydown', (event) => {
-        if (event.type === 'click' || event.which === 13 || event.which === 32) {
-            event.preventDefault();
-            $('.search-by').toggleClass('rotate');
-        }
-    });
-
-    // Hides .search-by when clicked outside its container.
-    $(document).click((event) => {
-        // Check if the clicked element is not inside .search-by.
-        if (!$(event.target).closest('.search-by').length) {
-            // Hide .search-by and .search-by-overlay.
-            $('.search-by').removeClass('rotate');
-        }
-    });
-
     // Changes .search-input background-color on interaction
     $('.search-input').on('focus', () => {
         $('.search-input').addClass('input-color');

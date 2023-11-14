@@ -57,12 +57,6 @@
         transition: background-image 0.2s ease-out;
     }
 
-        /* search-by js classes */
-        .search-by.rotate {
-            background-image: url("../icons/chevron-down-reversed.svg");
-            z-index: 3;
-        }
-
 
     /* search */
     .search-container {
