@@ -1,6 +1,6 @@
 .above-footer {
     background-color: #101010;
-    padding: 41px 3%;
+    padding: 41px 0;
 }
 
 .above-footer h2 {
@@ -35,6 +35,8 @@
 
 .container {
     display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -49,8 +51,8 @@
 }
 
 #photo {
-    border-radius: 10%;
-    width: 70%;
+    border-radius: 25px;
+    width: 250px;
 }
 
 .socials-container {
@@ -66,7 +68,39 @@
 
 footer {
     background-color: #101010;
-    padding: 13px 1%;
+    padding: 13px 0;
     border-top: 1px solid #FFFFFF;
     text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .dorcas {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .frank, .dorcas, .joshua {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .dorcas {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .frank, .dorcas, .joshua {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }

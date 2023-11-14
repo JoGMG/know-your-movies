@@ -29,8 +29,8 @@ $(document).ready(() => {
     $('input[name="search-by-dropdown-option"]').change(function () {
         if ($(this).is(':checked')) {
             const text = $('.search-by-button-text').text();
-            if (!$('.search-by-button-text').html().includes('&nbsp;+1')) {
-                $('.search-by-button-text').html(text + '&nbsp;+1');
+            if (!$('.search-by-button-text').html().includes('&nbsp;+1&nbsp;')) {
+                $('.search-by-button-text').html(text + '&nbsp;+1&nbsp;');
             }
             $('.search-by-dropdown').addClass('toggle');
         }
@@ -53,7 +53,7 @@ $(document).ready(() => {
     });
 
     // Retrieves movie details based on search-input value
-    $('.search-button').on('click keydown', (event) => {
+    $('.search-button, .search-icon').on('click keydown', (event) => {
         if (event.type === 'click' || event.which === 13 || event.which === 32) {
             event.preventDefault();
             const keyword = $('.search-input').val();
