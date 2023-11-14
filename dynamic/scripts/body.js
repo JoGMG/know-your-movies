@@ -79,7 +79,7 @@ $(document).ready(() => {
     $('.search-input').keypress(function(event) {
         if (event.which === 13) {
             event.preventDefault();
-            $('.search-button').click();
+            $('.search-button, .search-icon').click();
         }
     });
 

@@ -175,6 +175,7 @@
         resize: none;
         white-space: nowrap;
         position: relative;
+        margin-right: 0;
     }
 
     .search-input::placeholder {
@@ -210,6 +211,16 @@
 
     .search-icon {
         display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        background-color: #101010;
+        border-radius: 0 3em 3em 0;
+        margin-right: 0;
+    }
+
+    .search-icon svg path {
+        fill: #FFFFFF;
     }
 
     /* search js classes */
@@ -234,10 +245,6 @@
         .search-container {
             width: 90%;
         }
-
-        .search-input {
-            margin-right: 0;
-        }
         
         .search-button {
             display: none;
@@ -245,12 +252,6 @@
 
         .search-icon {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 13px;
-            background-color: #707070;
-            border-radius: 0 3em 3em 0;
-            margin-right: 0;
         }
     }
 
