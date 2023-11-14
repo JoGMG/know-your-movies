@@ -126,13 +126,16 @@
                 margin-right: 10px;
             }
 
+            @supports not (background-attachment: fixed) {
+                .kympicture {
+                    background-attachment: scroll;
+                }
+            }
+
+            /* Small devices (phones and tablets) */
             @media only screen and (max-width: 767px) {
                 .proj-kym {
                     margin-right: 25px;
-                }
-                .kympicture {
-                    background-attachment: scroll;
-                    background-size: cover;
                 }
 
                 .features-items {
@@ -159,6 +162,26 @@
 
                 .about-footer {
                     flex-direction: column;
+                }
+            }
+
+            /* Medium devices (small laptops and tablets) */
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+                .features-items {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .one, .two {
+                    width: 70%;
+                }
+
+                .one img, .two img {
+                    width: 100%;
+                }
+
+                .one {
+                    margin-bottom: 50px;
                 }
             }
         </style>
