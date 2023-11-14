@@ -48,6 +48,14 @@
     }
 
     @media only screen and (max-width: 767px) {
+        header {
+            height: 50px;
+        }
+
+        .intro-page {
+            margin-top: 5px;
+            margin-right: 25px;
+        }
     }
 
 /* Header search */
