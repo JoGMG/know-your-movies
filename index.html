@@ -43,18 +43,7 @@
                 background-repeat: no-repeat;
                 background-position: center top 70px;
                 background-size: cover;
-            }
-
-            @supports (background-attachment: fixed) {
-                .kympicture {
-                    background-attachment: fixed;
-                }
-            }
-
-            @supports not (background-attachment: fixed) {
-                .kympicture {
-                    background-attachment: scroll;
-                }
+                background-attachment: fixed;
             }
 
             .features {
@@ -143,6 +132,10 @@
                     margin-right: 25px;
                 }
 
+                .kympicture {
+                    background-attachment: scroll;
+                }
+
                 .features-items {
                     flex-direction: column;
                     align-items: center;
@@ -175,6 +168,10 @@
                 .features-items {
                     flex-direction: column;
                     align-items: center;
+                }
+
+                .kympicture {
+                    background-attachment: scroll;
                 }
 
                 .one, .two {
