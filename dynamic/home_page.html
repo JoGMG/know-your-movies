@@ -27,19 +27,11 @@
             <div class="search-by-overlay"></div>
             <h1>Welcome to KYM!</h1>
             <div class="search-by-container">
-                <div class="search-by-button" role="button" tabindex="0">
-                    <span class="search-by-button-text">
-                        Search By
-                    </span>
-                    <img src="../dynamic/icons/chevron-down.svg" alt="chevron-down icon">
-                </div>
-                <div class="search-by-dropdown">
-                    <input type="radio" id="movie-name" name="search-by-dropdown-option" value="movie-name">
-                    <label for="movie-name">Movie name</label><br>
-                    <div class="separator"></div>
-                    <input type="radio" id="cast-name" name="search-by-dropdown-option" value="cast-name">
-                    <label for="cast-name">Cast name</label><br>
-                </div>
+                <p>Search By:</p>
+                <select class="search-by">
+                    <option value="moviename" id="option">Movie name</option>
+                    <option value="castname" id="option">Cast name</option>
+                </select>
             </div>
             <div class="search-container">
                 <textarea name="search-keywords" class="search-input" cols="30" rows="10" placeholder="Type here..."></textarea>

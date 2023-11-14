@@ -1,38 +1,20 @@
 $(document).ready(() => {
-// Home page
+// Home page.
 
-    // Implement actions when search-by-button is clicked
-    $('.search-by-button').on('click keydown', (event) => {
+    // Implement actions when search-by is clicked.
+    $('.search-by').on('click keydown', (event) => {
         if (event.type === 'click' || event.which === 13 || event.which === 32) {
             event.preventDefault();
-            $('.search-by-dropdown').toggleClass('active');
-            $('.search-by-dropdown .separator, .search-by-dropdown input[type="radio"], .search-by-dropdown label').toggleClass('active');
-            $('.search-by-button img').toggleClass('rotate');
-            $('.search-by-button').toggleClass('radius');
-            $('.search-by-overlay').toggleClass('active');
-        }
-    });
-    // Hides .search-by-dropdown when clicked outside its container
-    $(document).click((event) => {
-        // Check if the clicked element is not inside .search-by-container
-        if (!$(event.target).closest('.search-by-container').length) {
-            // Hide .search-by-overlay and .search-by-dropdown
-            $('.search-by-overlay').removeClass('active');
-            $('.search-by-dropdown').removeClass('active');
-            $('.search-by-dropdown .separator, .search-by-dropdown input[type="radio"], .search-by-dropdown label').removeClass('active');
-            $('.search-by-button img').removeClass('rotate');
-            $('.search-by-button').removeClass('radius');
+            $('.search-by').toggleClass('rotate');
         }
     });
 
-    // Implement actions for checked .search-by-dropdown radio option
-    $('input[name="search-by-dropdown-option"]').change(function () {
-        if ($(this).is(':checked')) {
-            const text = $('.search-by-button-text').text();
-            if (!$('.search-by-button-text').html().includes('&nbsp;+1&nbsp;')) {
-                $('.search-by-button-text').html(text + '&nbsp;+1&nbsp;');
-            }
-            $('.search-by-dropdown').addClass('toggle');
+    // Hides .search-by when clicked outside its container.
+    $(document).click((event) => {
+        // Check if the clicked element is not inside .search-by.
+        if (!$(event.target).closest('.search-by').length) {
+            // Hide .search-by and .search-by-overlay.
+            $('.search-by').removeClass('rotate');
         }
     });
 
@@ -57,21 +39,15 @@ $(document).ready(() => {
         if (event.type === 'click' || event.which === 13 || event.which === 32) {
             event.preventDefault();
             const keyword = $('.search-input').val();
+            const searchby = $('.search-by').val();
 
             // Sets search input to url search query
             const url = new URL("searchresults_page.html", window.location.href);
             url.searchParams.set("search", keyword);
+            url.searchParams.set("by", searchby);
+    
             window.location.href = url.toString();
 
-            if ($('#movie-name').is(':checked')) {
-                url.searchParams.set("by", "moviename");
-            } else if ($('#cast-name').is(':checked')) {
-                url.searchParams.set("by", "castname");
-            } else {
-                url.searchParams.set("by", "default");
-            }
-          
-            window.location.href = url.toString();
         }
     });
 
@@ -174,7 +150,7 @@ $(document).ready(() => {
             }
         };
 
-        if (byQueryFromURL === 'moviename' | byQueryFromURL === 'default') {
+        if (byQueryFromURL === 'moviename') {
             // Gets movies based on search query by movie-name
             fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQ}&include_adult=false&language=en-US`, options)
                 .then(response => response.json())
