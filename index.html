@@ -42,8 +42,19 @@
                 background-image: url(./dynamic/images/intro-kym.png);
                 background-repeat: no-repeat;
                 background-position: center top 70px;
-                background-attachment: fixed;
                 background-size: cover;
+            }
+
+            @supports (background-attachment: fixed) {
+                .kympicture {
+                    background-attachment: fixed;
+                }
+            }
+
+            @supports not (background-attachment: fixed) {
+                .kympicture {
+                    background-attachment: scroll;
+                }
             }
 
             .features {
@@ -124,12 +135,6 @@
                 margin-left: 10px;
                 padding-right: 10px;
                 margin-right: 10px;
-            }
-
-            @supports not (background-attachment: fixed) {
-                .kympicture {
-                    background-attachment: scroll;
-                }
             }
 
             /* Small devices (phones and tablets) */
