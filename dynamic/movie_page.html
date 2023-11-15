@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../dynamic/icons/kym-logo-transparent.svg">
         <link rel="stylesheet" href="../dynamic/styles/header.css">
         <link rel="stylesheet" href="../dynamic/styles/body.css">
@@ -13,26 +14,41 @@
     </head>
     <body>
         <header>
-            <div class="chevron-button-overlay"></div>
             <div class="logo">
                 <img src="../dynamic/icons/kym-logo-transparent.svg" alt="KYM Logo" role="image" title="Go to KYM Home" tabindex="0">
             </div>
             <div class="header-search-container">
                 <div class="chevron-button-container">
-                    <div class="chevron-button" role="button" tabindex="0">
-                        <img src="../dynamic/icons/chevron-down.svg" alt="chevron-down icon">
-                    </div>
-                    <div class="chevron-button-dropdown">
-                        <input type="radio" id="movie-name" name="search-by-option" value="movie-name">
-                        <label for="movie-name">Movie name</label><br>
-                        <div class="separator"></div>
-                        <input type="radio" id="cast-name" name="search-by-option" value="cast-name">
-                        <label for="cast-name">Cast name</label><br>
-                    </div>
+                    <select class="chevron-button">
+                        <option value="moviename">Movie name</option>
+                        <option value="castname">Cast name</option>
+                    </select>
                 </div>
                 <div class="input-search-container">
                     <textarea name="header-search-keywords" class="search-input-header" cols="30" rows="10" placeholder="Type here..."></textarea>
                     <span class="search-button-header" role="button" tabindex="0">Search</span>
+                </div>
+            </div>
+            <div class="search-icon-header" role="button" tabindex="0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26.235" height="26.235" viewBox="0 0 26.235 26.235">
+                    <path id="Icon_material-search" data-name="Icon material-search" d="M23.25,21H22.065l-.42-.405a9.765,9.765,0,1,0-1.05,1.05l.405.42V23.25l7.5,7.485L30.735,28.5Zm-9,0A6.75,6.75,0,1,1,21,14.25,6.741,6.741,0,0,1,14.25,21Z" transform="translate(-4.5 -4.5)" fill="#101010"/>
+                </svg>
+            </div>
+            <div class="search-icon-header-dropdown">
+                <div class="search-by-container">
+                    <p>Search By:</p>
+                    <select class="search-by">
+                        <option value="moviename" id="option">Movie name</option>
+                        <option value="castname" id="option">Cast name</option>
+                    </select>
+                </div>
+                <div class="search-container">
+                    <textarea name="search-keywords" class="search-input" cols="30" rows="10" placeholder="Type here..."></textarea>
+                    <span class="search-icon" role="button" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26.235" height="26.235" viewBox="0 0 26.235 26.235">
+                            <path id="Icon_material-search" data-name="Icon material-search" d="M23.25,21H22.065l-.42-.405a9.765,9.765,0,1,0-1.05,1.05l.405.42V23.25l7.5,7.485L30.735,28.5Zm-9,0A6.75,6.75,0,1,1,21,14.25,6.741,6.741,0,0,1,14.25,21Z" transform="translate(-4.5 -4.5)" fill="#101010"/>
+                            </svg>
+                    </span>
                 </div>
             </div>
         </header>

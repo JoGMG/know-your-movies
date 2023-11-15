@@ -150,7 +150,7 @@
     }
 
     .search-button-header:hover {
-        background-color: #2A2A2A;
+        background-color: #444444;
         transition: 0.5s ease-out;
     }
 
@@ -183,6 +183,7 @@
 
     header .search-by-container p {
         color: #D1D1D1;
+        font-weight: 400;
     }
 
     @media only screen and (max-width: 767px) {
