@@ -10,7 +10,7 @@ $(document).ready(() => {
     });
 
     // Logo links to homepage when clicked
-    $('.logo').on('click keydown', (event) => {
+    $('.logo img').on('click keydown', (event) => {
         if (event.type === 'click' || event.which === 13 || event.which === 32) {
             event.preventDefault();
             window.location.href = "home_page.html"
@@ -22,12 +22,12 @@ $(document).ready(() => {
         if (event.type === 'click' || event.which === 13 || event.which === 32) {
             event.preventDefault();
             const keyword = $('.search-input').val();
-            const searchby = $('.search-by').val();
+            const searchBy = $('.search-by').val();
 
             // Sets search input to url search query
             const url = new URL("searchresults_page.html", window.location.href);
             url.searchParams.set("search", keyword);
-            url.searchParams.set("by", searchby);
+            url.searchParams.set("by", searchBy);
     
             window.location.href = url.toString();
 
@@ -43,28 +43,25 @@ $(document).ready(() => {
     });
 
 // Header search
-
-    // Implement actions when .chevron-button is clicked
-    $('.chevron-button').on('click keydown', (event) => {
+    let isExpanded2 = false
+    $('.search-icon-header').on('click keydown', (event) => {
         if (event.type === 'click' || event.which === 13 || event.which === 32) {
             event.preventDefault();
-            $('.chevron-button-dropdown').toggleClass('active');
-            $('.chevron-button-dropdown .separator, .chevron-button-dropdown input[type="radio"], .chevron-button-dropdown label').toggleClass('active');
-            $('.chevron-button img').toggleClass('rotate');
-            $('.chevron-button').toggleClass('radius');
-            $('.chevron-button-overlay').toggleClass('active');
+            if (isExpanded2) {
+                $('.search-icon-header-dropdown').removeClass('active');
+                isExpanded2 = false
+            } else {
+                $('.search-icon-header-dropdown').addClass('active');
+                isExpanded2 = true
+            }
         }
     });
-    // Hides .chevron-button-dropdown when clicked outside its container
-    $(document).click((event) => {
-        // Check if the clicked element is not inside .chevron-button-container
-        if (!$(event.target).closest('.chevron-button-container').length && !$(event.target).closest('.saviour').length) {
-            // Hide .chevron-button-overlay and .chevron-button-dropdown
-            $('.chevron-button-dropdown').removeClass('active');
-            $('.chevron-button-dropdown .separator, .chevron-button-dropdown input[type="radio"], .chevron-button-dropdown label').removeClass('active');
-            $('.chevron-button img').removeClass('rotate');
-            $('.chevron-button').removeClass('radius');
-            $('.chevron-button-overlay').removeClass('active');
+
+    // Hides .search-icon-header-dropdown when clicked outside its container
+    $(document).click(function (event) {
+        // Check if the clicked element is not inside .search-icon-header-dropdown
+        if (!$(event.target).closest('header').length) {
+            $('.search-icon-header-dropdown').removeClass('active');
         }
     });
 
@@ -84,18 +81,12 @@ $(document).ready(() => {
             if (event.type === 'click' || event.which === 13 || event.which === 32) {
                 event.preventDefault();
                 const keyword = $('.search-input-header').val();
+                const chevronButton = $('.chevron-button').val();
     
                 // Sets search input to url search query
                 const url = new URL("searchresults_page.html", window.location.href);
                 url.searchParams.set("search", keyword);
-
-                if ($('#movie-name').is(':checked')) {
-                    url.searchParams.set("by", "moviename");
-                } else if ($('#cast-name').is(':checked')) {
-                    url.searchParams.set("by", "castname");
-                } else {
-                    url.searchParams.set("by", "default");
-                }
+                url.searchParams.set("by", chevronButton);
 
                 window.location.href = url.toString();
             }
