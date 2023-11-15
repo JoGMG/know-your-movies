@@ -97,7 +97,7 @@
         background-repeat: no-repeat;
         background-size: 17px;
         background-position: left 12px center;
-        margin-right: 0;
+        margin: 0;
     }
 
     .input-search-container {
@@ -117,7 +117,8 @@
         flex-grow: 1;
         resize: none;
         white-space: nowrap;
-        margin-right: 0;
+        margin: 0;
+        position: relative;
     }
 
     .search-input-header::placeholder {
@@ -144,7 +145,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        margin-right: 0;
+        margin: 0;
     }
 
     .search-button-header:hover {
@@ -165,7 +166,7 @@
         visibility: hidden;
         flex-direction: column;
         position: absolute;
-        background-color: #505050;
+        background-color: #2A2A2A;
         width: 100%;
         top: 70px;
         left: 0;
@@ -177,6 +178,10 @@
         visibility: visible;
         opacity: 1;
         transition: 0.5s ease-out;
+    }
+
+    header .search-by-container p {
+        color: #D1D1D1;
     }
 
     @media only screen and (max-width: 767px) {
