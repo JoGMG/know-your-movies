@@ -113,6 +113,7 @@
         font-weight: 400;
         font-size: 1.05em;
         padding: 13px 20px;
+        border-radius: 0 0 0 0;
         height: 22px;
         flex-grow: 1;
         resize: none;
