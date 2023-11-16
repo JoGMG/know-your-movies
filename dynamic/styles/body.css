@@ -207,6 +207,7 @@
     width: 1180px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #1FBFFB;
 }
 
 .movie {
@@ -272,50 +273,23 @@
     font-size: 1.3em;
 }
 
-@media only screen and (max-width: 784px) {
-    .searchpage-container {
-        padding-top: 100px;
-    }
-
+@media only screen and (min-width: 930px) and (max-width: 1180px) {
     .movie-container {
-        width: 100%;
+        width: 930px;
     }
 
     .movie {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 10px;
-        padding-right: 10px;
+        width: 250px;
     }
+}
 
-    .movie-poster {
-        border-radius: 15px;
-        width: 162px;
-        height: 238.5px;
-    }
-    
-    .movie-poster img {
-        border-radius: 15px;
-        width: 162px;
-        height: 238.5px;
-    }
-    
-    .movie-title {
-        width: 162px;
-        font-size: 1.3em;
-    }
-
-    .movie-date {
-        width: 162px;
-        font-size: 1.1em;
+@media only screen and (max-width: 767px) {
+    .searchpage-container {
+        padding-top: 100px;
     }
 }
 
 @media only screen and (min-width: 785px) and (max-width: 929px) {
-    .searchpage-container {
-        padding-top: 100px;
-    }
-
     .movie-container {
         width: 785px;
     }
@@ -348,13 +322,168 @@
     }
 }
 
-@media only screen and (min-width: 930px) and (max-width: 1180px) {
+@media only screen and (min-width: 570px) and (max-width: 784px) {
     .movie-container {
-        width: 930px;
+        width: 570px;
     }
 
     .movie {
-        width: 250px;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .movie-poster {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-poster img {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-title {
+        width: 162px;
+        font-size: 1.3em;
+    }
+
+    .movie-date {
+        width: 162px;
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 569px) {
+    .movie-container {
+        width: 400px;
+    }
+
+    .movie {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+
+    .movie-poster {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-poster img {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-title {
+        width: 162px;
+        font-size: 1.3em;
+    }
+
+    .movie-date {
+        width: 162px;
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 399px) {
+    .movie-container {
+        width: 370px;
+    }
+
+    .movie {
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+
+    .movie-poster {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-poster img {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-title {
+        width: 162px;
+        font-size: 1.3em;
+    }
+
+    .movie-date {
+        width: 162px;
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 369px) {
+    .movie-container {
+        width: 340px;
+    }
+
+    .movie {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .movie-poster {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-poster img {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-title {
+        width: 162px;
+        font-size: 1.3em;
+    }
+
+    .movie-date {
+        width: 162px;
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 339px) {
+    .movie-container {
+        width: 270px;
+    }
+
+    .movie {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .movie-poster {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-poster img {
+        border-radius: 15px;
+        width: 162px;
+        height: 238.5px;
+    }
+    
+    .movie-title {
+        width: 162px;
+        font-size: 1.3em;
+    }
+
+    .movie-date {
+        width: 162px;
+        font-size: 1.1em;
     }
 }
 
