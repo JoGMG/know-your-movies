@@ -440,17 +440,22 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        padding-left: 1.2%;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cast {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 50px;
     }
 
     .cast-headshot img {
         width: 180px;
         border-radius: 25px;
-    }
-
-    .cast {
-        margin-left: 5.2%;
-        margin-bottom: 50px;
     }
 
     .cast-name {
@@ -481,6 +486,7 @@
         padding-top: 30px;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .reviews-section h2 {
@@ -497,8 +503,8 @@
         border-radius: 35px;
         font-family: 'Roboto', sans-serif;
         color: #FFFFFF;
-        margin: 0 25% 0 25%;
-        padding: 50px 7%;
+        width: 500px;
+        padding: 50px 100px;
         position: relative;
     }
 
@@ -582,7 +588,6 @@
 
     .right-quote-icon {
         margin-left: auto;
-        color: #1FBFFB;
     }
 
     .leave-a-review-button {
@@ -630,8 +635,8 @@
         border-radius: 35px;
         font-family: 'Roboto', sans-serif;
         color: #FFFFFF;
-        margin: 0 25% 0 25%;
-        padding: 50px 7%;
+        width: 500px;
+        padding: 50px 100px;
         position: relative;
         display: none;
     }
@@ -656,6 +661,10 @@
         font-weight: 500;
     }
 
+    .askt {
+        color: #1FBFFB;
+    }
+
     .user-email, .user-name, .user-review {
         display: flex;
         flex-direction: column;
@@ -668,8 +677,9 @@
     #user-email-input, #user-name-input {
         white-space: nowrap;
         height: 20px;
-        width: 12em;
+        width: 180px;
         margin-top: 7px;
+        position: relative;
     }
 
     #user-email-input::-webkit-scrollbar,
@@ -680,6 +690,7 @@
 
     #user-review-input {
         margin-top: 7px;
+        position: relative;
     }
 
     textarea::placeholder {
@@ -727,6 +738,154 @@
         border-radius: 5px;
         bottom: 10px;
         left: 10px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .moviepage-container {
+            padding-top: 120px;
+        }
+
+        .movie-details-section {
+            padding-left: 5%;
+        }
+
+        .poster-moviepage img {
+            width: 180px;
+            border-radius: 15px;
+        }
+
+        .title-moviepage h1 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .date-moviepage {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .genre-moviepage {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .summary-moviepage {
+            font-size: 1.1em;
+        }
+        
+        .summary-moviepage p {
+
+            font-size: 0.7em;
+            margin-top: 5px;
+            max-width: 95%;
+        }
+
+        .cast-section {
+            padding-top: 40px;
+        }
+
+        .cast {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 50px;
+        }
+    
+        .cast-headshot img {
+            width: 140px;
+            border-radius: 25px;
+        }
+    
+        .cast-name {
+            font-size: 1.2em;
+            width: 140px;
+        }
+
+        .reviews-section {
+            padding-top: 10px;
+        }
+
+        .review-container {
+            border-radius: 20px;
+            width: 74%;
+            padding: 25px 50px;
+        }
+
+        .review-username {
+            font-weight: 500;
+            font-size: 1.3em;
+        }
+    
+        .review-date {
+            font-weight: 400;
+            font-size: .9em;
+        }
+    
+        .review-quote-container img {
+            width: 17px;
+        }
+
+        .review-text-shortened-container {
+            font-size: .9em;
+        }
+    
+        .review-text {
+            font-size: .9em;
+        }
+    
+        .prev {
+            width: 35px;
+            left: 10px;
+        }
+    
+        .next {
+            width: 35px;
+            right: 10px;
+        }
+
+        .leave-a-review-container {
+            border-radius: 20px;
+            width: 74%;
+            padding: 40px 50px;
+        }
+
+        #user-email-input, #user-name-input {
+            width: 95px;
+        }
+
+        #user-review-input {
+            height: 100px;
+        }
+
+        #close-icon {
+            width: 37px;
+            top: 15px;
+            right: 15px;
+
+        }
+    }
+
+    @media only screen and (min-width: 430px) and (max-width: 767px) {
+        #user-email-input, #user-name-input {
+            width: 120px;
+        }
+    }
+
+    @media only screen and (min-width: 530px) and (max-width: 767px) {
+        #user-email-input, #user-name-input {
+            width: 150px;
+        }  
+    }
+
+    @media only screen and (min-width: 630px) and (max-width: 767px) {
+        #user-email-input, #user-name-input {
+            width: 190px;
+        }
+    }
+
+    @media only screen and (min-width: 730px) and (max-width: 767px) {
+        #user-email-input, #user-name-input {
+            width: 230px;
+        }
     }
 
 /* scrollbar */
