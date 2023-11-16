@@ -137,9 +137,10 @@ $(document).ready(() => {
                         const id = data.id;
 
                         const newdate = date.split('-')[0];
+                        const url = `movie_page.html?${title}&id=${id}`;
 
                         const movieContainer = $('.movie-container');
-                        const movieItem = $('<div>').addClass('movie').attr({"tabindex": "0", "data-id": `${id}`});
+                        const movieItem = $('<a>').addClass('movie').attr({"href": url});
 
                         const moviePoster = $('<div>').addClass('movie-poster').html(`<img src="${poster}" alt="${title} poster" onerror="this.src='../dynamic/images/poster-placeholder.png'; this.removeAttribute('alt');"></img>`);
                         const movieTitle = $('<div>').addClass('movie-title').attr({"title": `${title}`}).text(`${title}`);
@@ -165,10 +166,11 @@ $(document).ready(() => {
                                     const id = innerData.id;
     
                                     const newdate = date.split('-')[0];
+                                    const url = `movie_page.html?${title}&id=${id}`;
     
                                     const movieContainer = $('.movie-container');
-                                    const movieItem = $('<div>').addClass('movie').attr({"tabindex": "0", "data-id": `${id}`});
-    
+                                    const movieItem = $('<a>').addClass('movie').attr({"href": url});
+
                                     const moviePoster = $('<div>').addClass('movie-poster').html(`<img src="${poster}" alt="${title} poster" onerror="this.src='../dynamic/images/poster-placeholder.png'; this.removeAttribute('alt');"></img>`);
                                     const movieTitle = $('<div>').addClass('movie-title').attr({"title": `${title}`}).text(`${title}`);
                                     const movieDate = $('<div>').addClass('movie-date').text(`${newdate || '-'}`);
@@ -186,21 +188,6 @@ $(document).ready(() => {
 
 // Movies page
 
-    // Click event handler for .movie elements
-    $(document).on('click', '.movie', function (event) {
-        if (event.type === 'click' || event.which === 13 || event.which === 32) {
-            // Get the data-id attribute and title value of the clicked .movie element
-            const dataId = $(this).attr('data-id');
-            const movieT = $(this).find('.movie-title').text();
-
-            // Construct the URL for the new local HTML page using the title and dataId
-            const url = `movie_page.html?${movieT}&id=${dataId}`;
-
-            // Redirect to the new page
-            window.location.href = url;
-        }
-    });
-
     // Check if the current page is "movie_page.html"
     if (window.location.pathname.includes("movie_page.html")) {
 
@@ -208,18 +195,12 @@ $(document).ready(() => {
             if (event.type === 'click' || event.which === 13 || event.which === 32) {
                 event.preventDefault();
                 const keyword = $('.search-input-header').val();
+                const searchBy = $('.search-by').val();
     
                 // Sets search input to url search query
                 const url = new URL("searchresults_page.html", window.location.href);
                 url.searchParams.set("search", keyword);
-
-                if ($('#movie-name').is(':checked')) {
-                    url.searchParams.set("by", "moviename");
-                } else if ($('#cast-name').is(':checked')) {
-                    url.searchParams.set("by", "castname");
-                } else {
-                    url.searchParams.set("by", "default");
-                }
+                url.searchParams.set("by", searchBy);
 
                 window.location.href = url.toString();
             }
