@@ -241,12 +241,17 @@ $(document).ready(() => {
 
                 const titleContent = $('title').text();
                 $('title').text(`${title} - ` + titleContent);
+                
+                const posterMP = $('<img>').addClass('poster-moviepage').attr({"src": poster, "alt": title + " poster"}).on("error", function() {
+                    $(this).attr("src", "../dynamic/images/poster-placeholder.jpg").removeAttr("alt");
+                });
+                const titleMP = $('<h1>').addClass('title-moviepage').text(title);
+                const dateMP = $('<div>').addClass('date-moviepage').text(newdate);
+                const genreMP =$('<div>').addClass('genre-moviepage').text(`${genre[0].name}, ${genre[1].name}`);
+                const summaryMP = $('<div>').addClass('summary-moviepage').text('Summary');
+                const summaryText = $('<p>').text(summary);
 
-                $('.poster-moviepage').html(`<img src="${poster}" alt="${title} poster" onerror="this.src='../dynamic/images/poster-placeholder.jpg'; this.removeAttribute('alt');"></img>`);
-                $('.title-moviepage').html(`<h1>${title}</h1>`);
-                $('.date-moviepage').text(newdate);
-                $('.genre-moviepage').text(`${genre[0].name}, ${genre[1].name}`);
-                $('.summary-moviepage').html(`Summary<p>${summary}</p>`);
+                $('.movie-metadata').append(posterMP).append(titleMP).append(dateMP).append(genreMP).append(summaryMP).append(summaryText);
             });
 
         // Gets movies cast details based on movie id

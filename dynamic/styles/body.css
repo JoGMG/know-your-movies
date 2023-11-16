@@ -237,6 +237,7 @@
     transform: scale(1.1);
     transition: transform 0.5s ease;
     filter: brightness(70%);
+    border-radius: 25px;
 }
 
 .movie-title {
@@ -285,6 +286,12 @@
 @media only screen and (max-width: 767px) {
     .searchpage-container {
         padding-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 929px) {
+    .movie-poster img:hover {
+        border-radius: 25px;
     }
 }
 
@@ -393,8 +400,8 @@
     }
 
     .movie {
-        margin-left: 11px;
-        margin-right: 11px;
+        margin-left: 11.5px;
+        margin-right: 11.5px;
     }
 
     .movie-poster {
@@ -494,21 +501,18 @@
     flex-direction: column;
 }
 
-.movie-details-section {
-    display: flex;
+.movie-metadata {
     padding-left: 10%;
 }
 
-.poster-moviepage img {
+.movie-metadata img {
     width: 300px;
     border-radius: 25px;
+    float: left;
+    margin-right: 3%;
 }
 
-.movie-metadata {
-    margin-left: 3%;
-}
-
-.title-moviepage h1 {
+.title-moviepage {
     color: #101010;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -539,11 +543,11 @@
     font-size: 1.7em;
 }
 
-.summary-moviepage p {
+.movie-metadata p {
     color: #101010;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 0.75em;
+    font-size: 1.3em;
     margin-top: 5px;
     max-width: 80%;
 }
@@ -871,16 +875,16 @@
             padding-top: 120px;
         }
 
-        .movie-details-section {
+        .movie-metadata {
             padding-left: 5%;
         }
-
-        .poster-moviepage img {
+        
+        .movie-metadata img {
             width: 180px;
             border-radius: 15px;
         }
-
-        .title-moviepage h1 {
+        
+        .title-moviepage {
             font-size: 1.3em;
             margin-bottom: 7px;
             margin-top: 2px;
@@ -900,9 +904,8 @@
             font-size: 1.1em;
         }
         
-        .summary-moviepage p {
-
-            font-size: 0.7em;
+        .movie-metadata p {
+            font-size: 1em;
             margin-top: 5px;
             max-width: 95%;
         }
