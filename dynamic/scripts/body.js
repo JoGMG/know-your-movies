@@ -247,7 +247,16 @@ $(document).ready(() => {
                 });
                 const titleMP = $('<h1>').addClass('title-moviepage').text(title);
                 const dateMP = $('<div>').addClass('date-moviepage').text(newdate);
-                const genreMP =$('<div>').addClass('genre-moviepage').text(`${genre[0].name}, ${genre[1].name}`);
+
+                const genreMP = $('<div>').addClass('genre-moviepage');
+                genre.forEach(function(genreItem, index) {
+                if (index === 0) {
+                    genreMP.text(genreItem.name);
+                } else {
+                    genreMP.append(', ' + genreItem.name);
+                }
+                });
+
                 const summaryMP = $('<div>').addClass('summary-moviepage').text('Summary');
                 const summaryText = $('<p>').text(summary);
 
