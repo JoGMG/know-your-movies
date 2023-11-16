@@ -611,6 +611,7 @@
     /* reviews section */
     .reviews-section {
         padding-top: 30px;
+        padding-bottom: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
