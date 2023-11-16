@@ -440,16 +440,15 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        width: 95%;
+        width: 1180px;
         margin-left: auto;
         margin-right: auto;
+        background-color: #1FBFFB;
     }
 
     .cast {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 28px;
+        padding-right: 28px;
         margin-bottom: 50px;
     }
 
@@ -756,7 +755,8 @@
 
         .title-moviepage h1 {
             font-size: 1.3em;
-            margin-bottom: 10px;
+            margin-bottom: 7px;
+            margin-top: 2px;
         }
         
         .date-moviepage {
@@ -778,26 +778,6 @@
             font-size: 0.7em;
             margin-top: 5px;
             max-width: 95%;
-        }
-
-        .cast-section {
-            padding-top: 40px;
-        }
-
-        .cast {
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-bottom: 50px;
-        }
-    
-        .cast-headshot img {
-            width: 140px;
-            border-radius: 25px;
-        }
-    
-        .cast-name {
-            font-size: 1.2em;
-            width: 140px;
         }
 
         .reviews-section {
@@ -887,6 +867,119 @@
             width: 230px;
         }
     }
+
+    @media only screen and (min-width: 930px) and (max-width: 1180px) {
+        .cast-container {
+            width: 930px;
+        }
+
+        .cast {
+            padding-left: 26px;
+            padding-right: 26px;
+        }
+    }
+
+    @media only screen and (min-width: 785px) and (max-width: 929px) {
+        .cast-container {
+            width: 785px;
+        }
+
+        .cast {
+            padding-left: 8.5px;
+            padding-right: 8.5px;
+        }
+
+        .cast-headshot img {
+            width: 140px;
+        }
+    
+        .cast-name {
+            width: 140px;
+        }
+    }
+
+    @media only screen and (min-width: 650px) and (max-width: 784px) {
+        .cast-container {
+            width: 650px;
+        }
+
+        .cast {
+            padding-left: 11px;
+            padding-right: 11px;
+        }
+
+        .cast-headshot img {
+            width: 140px;
+        }
+    
+        .cast-name {
+            width: 140px;
+            font-size: 1.2em;
+        }
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 649px) {
+        .cast-container {
+            width: 500px;
+        }
+
+        .cast {
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+
+        .cast-headshot img {
+            width: 140px;
+        }
+    
+        .cast-name {
+            width: 140px;
+            font-size: 1.2em;
+        }
+    }
+
+    @media only screen and (min-width: 350px) and (max-width: 500px) {
+        .cast-container {
+            width: 350px;
+        }
+
+        .cast {
+            padding-left: 17.5px;
+            padding-right: 17.5px;
+        }
+
+        .cast-headshot img {
+            width: 140px;
+        }
+    
+        .cast-name {
+            width: 140px;
+            font-size: 1.2em;
+        }
+    }
+
+    @media only screen and (max-width: 349px) {
+        .cast-container {
+            width: 210px;
+        }
+
+        .cast {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .cast-headshot img {
+            width: 140px;
+        }
+    
+        .cast-name {
+            width: 140px;
+            font-size: 1.2em;
+        }
+    }
+
 
 /* scrollbar */
 /* width */
