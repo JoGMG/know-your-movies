@@ -648,10 +648,16 @@
     .review-username {
         font-weight: 500;
         font-size: 1.7em;
+        width: 250px;
+        word-wrap: break-word;
+        background-color: green;
     }
 
     .review-date {
         font-weight: 400;
+        width: 150px;
+        background-color: red;
+        text-align: end;
     }
 
     .review-quote-container {
@@ -929,11 +935,14 @@
         .review-username {
             font-weight: 500;
             font-size: 1.3em;
+            width: 60%;
         }
     
         .review-date {
             font-weight: 400;
             font-size: .9em;
+            width: 30%;
+            text-align: center;
         }
     
         .review-quote-container img {

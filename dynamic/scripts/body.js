@@ -58,11 +58,16 @@ $(document).ready(() => {
     });
 
     // Hides .search-icon-header-dropdown when clicked outside its container
-    $(document).click(function (event) {
-        // Check if the clicked element is not inside .search-icon-header-dropdown
-        if (!$(event.target).closest('header').length) {
+    $(document).click(function(event) {
+        // Check if the clicked element is not inside header
+        if (!$(event.target).closest('header, .saviour').length) {
             $('.search-icon-header-dropdown').removeClass('active');
         }
+    });
+
+    // Prevent clicks within .search-icon-header-dropdown from triggering the document click event
+    $('.search-icon-header-dropdown').click(function(event) {
+        event.stopPropagation();
     });
 
     // Changes .search-input-header background-color on interaction
@@ -330,7 +335,6 @@ $(document).ready(() => {
 
                     $('.right-quote-icon').before(reviewTextContainer);
                 });
-
             });
 
         // Implement actions when .leave-a-review-button is clicked
