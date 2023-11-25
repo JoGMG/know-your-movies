@@ -650,13 +650,11 @@
         font-size: 1.7em;
         width: 250px;
         word-wrap: break-word;
-        background-color: green;
     }
 
     .review-date {
         font-weight: 400;
         width: 150px;
-        background-color: red;
         text-align: end;
     }
 
