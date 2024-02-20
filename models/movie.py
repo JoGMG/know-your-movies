@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Movie data model (KYM). """
 from models.base_model import BaseModel, Base, os,\
-      Column, String, Integer, relationship
+      Column, String, Integer, Date, relationship
 
 class Movie(BaseModel, Base):
     """ Movie class (inherits from BaseModel). """
@@ -9,20 +9,20 @@ class Movie(BaseModel, Base):
     title = Column(
         String(128), nullable=False
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
-    year = Column(
-        Integer, nullable=False
+    release_date = Column(
+        Date, nullable=False
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
-    poster = Column(
+    poster_path = Column(
         String(256), nullable=True
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
-    summary = Column(
+    overview = Column(
         String(640), nullable=True
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
     if os.getenv('KYM_STORAGE') == 'db':
         cast = relationship(
             'Cast',
             cascade='all, delete, delete-orphan',
-            backref='movie'
+            backref='movies'
         )
     else:
         @property

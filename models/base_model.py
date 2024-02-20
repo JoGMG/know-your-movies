@@ -12,7 +12,7 @@ class BaseModel:
     """ Base class for all KYM classes. """
     id = Column(String(64), nullable=False, primary_key=True, unique=True)
 
-    def __init__(self, **kwargs):
+    def __init__(self, *args, **kwargs):
         """
         Initializes new instance attribute(s).
 
