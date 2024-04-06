@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Cast data model (KYM). """
-from models.base_model import BaseModel, Base, os,\
+from models.base_model import BaseModel, Base, os, \
       Column, String, Integer, ForeignKey, relationship
 
 

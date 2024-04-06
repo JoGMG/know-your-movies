@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ User data model (KYM). """
-from models.base_model import BaseModel, Base, os,\
+from models.base_model import BaseModel, Base, os, \
       Column, String, relationship
 
 

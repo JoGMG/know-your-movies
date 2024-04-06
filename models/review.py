@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Review data model (KYM). """
-from models.base_model import BaseModel, Base, os, datetime,\
+from models.base_model import BaseModel, Base, os, datetime, \
     Column, String, ForeignKey, relationship
 
 
