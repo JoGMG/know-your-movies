@@ -4,13 +4,16 @@ from models.movie import Movie
 from models.cast import Cast
 from models.user import User
 from models.review import Review
+from models.genre import Genre
 import json
 import os
 
 classes = {
     "Movie": Movie, "Cast": Cast,
-    "User": User, "Review": Review
+    "User": User, "Review": Review,
+    "Genre": Genre
 }
+
 
 class FileStorage:
     """ Implements file storage for KYM data models. """
@@ -80,3 +83,25 @@ class FileStorage:
     def close(self):
         """ Closes storage. """
         self.load()
+
+    def get(self, cls, id):
+        """
+        Returns the instance of a class with the specified id.
+
+        Arguments:
+            - cls: The Class.
+            - id: The ID of an instance of cls.
+        """
+        for instance in self.all(cls).values():
+            if instance.id == id:
+                return instance
+        return None
+
+    def count(self, cls):
+        """
+        Returns the total number of instances of a class.
+
+        Arguments:
+            - cls: The Class.
+        """
+        return len(self.all(cls))

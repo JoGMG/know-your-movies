@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Movie data model (KYM). """
 from models.base_model import BaseModel, Base, os,\
-      Column, String, Integer, Date, relationship
+      Column, String, Date, relationship
+
 
 class Movie(BaseModel, Base):
     """ Movie class (inherits from BaseModel). """
@@ -21,13 +22,14 @@ class Movie(BaseModel, Base):
     if os.getenv('KYM_STORAGE') == 'db':
         cast = relationship(
             'Cast',
-            cascade='all, delete, delete-orphan',
-            backref='movies'
+            back_populates='movies'
         )
     else:
         @property
         def cast(self):
-            """ Returns the cast of a movie instance. """
+            """
+            Returns the cast instances of this movie instance.
+            """
             from models import storage
             from models.cast import Cast
             movie_cast = []
@@ -38,13 +40,14 @@ class Movie(BaseModel, Base):
     if os.getenv('KYM_STORAGE') == 'db':
         reviews = relationship(
             'Review',
-            cascade='all, delete, delete-orphan',
-            backref='movie'
+            back_populates='movie'
         )
     else:
         @property
         def reviews(self):
-            """ Returns the reviews of a movie instance. """
+            """
+            Returns the review instances of this movie instance.
+            """
             from models import storage
             from models.review import Review
             movie_reviews = []
@@ -52,3 +55,18 @@ class Movie(BaseModel, Base):
                 if review.movie_id == self.id:
                     movie_reviews.append(review.to_dict())
             return movie_reviews
+    if os.getenv('KYM_STORAGE') == 'db':
+        genres = relationship('Genre', back_populates='movies')
+    else:
+        @property
+        def genres(self):
+            """
+            Returns the genre instances of this movie instance.
+            """
+            from models import storage
+            from models.genre import Genre
+            movie_genres = []
+            for genre in storage.all(Genre).values():
+                if genre.movie_id == self.id:
+                    movie_genres.append(genre.to_dict())
+            return movie_genres

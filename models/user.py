@@ -3,6 +3,7 @@
 from models.base_model import BaseModel, Base, os,\
       Column, String, relationship
 
+
 class User(BaseModel, Base):
     """ User class (inherits from BaseModel). """
     __tablename__ = 'users'
@@ -15,13 +16,14 @@ class User(BaseModel, Base):
     if os.getenv('HBNB_TYPE_STORAGE') == 'db':
         reviews = relationship(
             'Review',
-            cascade ='all, delete, delete-orphan',
-            backref ='user'
+            back_populates='user'
         )
     else:
         @property
         def reviews(self):
-            """ Returns the reviews of a user instance. """
+            """
+            Returns the review instances of this user instance.
+            """
             from models import storage
             from models.review import Review
             user_reviews = []

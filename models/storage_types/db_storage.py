@@ -7,7 +7,9 @@ from models.movie import Movie
 from models.cast import Cast
 from models.user import User
 from models.review import Review
+from models.genre import Genre
 import os
+
 
 class DBStorage:
     """ Implements database storage for KYM data models. """
@@ -27,7 +29,7 @@ class DBStorage:
             DATABASE_URL,
             pool_pre_ping=True
         )
-    
+
     def new(self, instance=None):
         """
         Adds instance to database storage.
@@ -47,7 +49,7 @@ class DBStorage:
     def save(self):
         """ Commits session changes. """
         self.__session.commit()
-    
+
     def all(self, cls=None):
         """
         Returns all the instances of all classes
@@ -57,20 +59,22 @@ class DBStorage:
             - cls: class.
         """
         objects = {}
-        classes = [Movie, Cast, User, Review]
+        classes = [Movie, Cast, User, Review, Genre]
         if cls is None:
             for clss in classes:
                 query = self.__session.query(clss)
                 for instance in query.all():
-                    instance_key = '{}.{}'.format(instance.__class__.__name__, instance.id)
+                    instance_key = '{}.{}'.format(
+                        instance.__class__.__name__, instance.id)
                     objects[instance_key] = instance
         else:
             query = self.__session.query(cls)
             for instance in query.all():
-                instance_key = '{}.{}'.format(instance.__class__.__name__, instance.id)
+                instance_key = '{}.{}'.format(
+                    instance.__class__.__name__, instance.id)
                 objects[instance_key] = instance
         return objects
-    
+
     def delete(self, instance=None):
         """
         Removes instance from database storage.
@@ -82,7 +86,7 @@ class DBStorage:
             self.__session.query(type(instance)).filter(
                 type(instance).id == instance.id
             ).delete(synchronize_session=False)
-        
+
     def load(self):
         """ Loads database storage. """
         Base.metadata.create_all(self.__engine)
@@ -91,7 +95,29 @@ class DBStorage:
             expire_on_commit=False
         )
         self.__session = scoped_session(SessionFactory)()
-    
+
     def close(self):
         """ Closes database storage session. """
         self.__session.close()
+
+    def get(self, cls, id):
+        """
+        Returns the instance of a class with the specified id.
+
+        Arguments:
+            - cls: The Class.
+            - id: The ID of an instance of cls.
+        """
+        for instance in self.all(cls).values():
+            if instance.id == id:
+                return instance
+        return None
+
+    def count(self, cls):
+        """
+        Returns the total number of instances of a class.
+
+        Arguments:
+            - cls: The Class.
+        """
+        return len(self.all(cls))

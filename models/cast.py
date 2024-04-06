@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Cast data model (KYM). """
 from models.base_model import BaseModel, Base, os,\
-      Column, String, Integer, ForeignKey
+      Column, String, Integer, ForeignKey, relationship
+
 
 class Cast(BaseModel, Base):
     """ Cast class (inherits from BaseModel). """
@@ -27,3 +28,21 @@ class Cast(BaseModel, Base):
     about = Column(
         String(640), nullable=True
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
+    if os.getenv('KYM_STORAGE') == 'db':
+        movies = relationship(
+            'Movie',
+            back_populates='cast'
+        )
+    else:
+        @property
+        def movies(self):
+            """
+            Returns the movie instances of this cast instance.
+            """
+            from models import storage
+            from models.movie import Movie
+            cast_movies = []
+            for movie in storage.all(Movie).values():
+                if movie.id == self.movie_id:
+                    cast_movies.append(movie.to_dict())
+            return cast_movies
