@@ -1,0 +1,7 @@
+Python==3.8.10
+Flask==3.0.2
+Werkzeug==3.0.2
+gunicorn==21.2.0
+mysql==8.0.36
+sqlalchemy==2.0.29
+mysqlclient==2.2.4
