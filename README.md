@@ -61,7 +61,8 @@ The project utilizes the following technologies:
 
 - Frank Kaziputa - UX Designer [Github](https://github.com/madalafk)
 - David Oluwatosin Dorcas - Front-End Developer [Github](https://github.com/iamoluwafisayo)
-- Joshua Attah - Back-End Developer [Github](https://github.com/JoGMG)<br><br>
+- Joshua Attah - Back-End Developer [Github](https://github.com/JoGMG)
+
 Feel like there's something missing that you can add? You are welcome to contribute to the project.<br>
 All you have to do is fork the project's repository, make your contributions and submit a new pull request.
 

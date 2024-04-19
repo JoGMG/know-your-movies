@@ -730,8 +730,10 @@
         width: 110px;
         padding: 12px 17px;
         margin-top: 20px;
-        text-align: center;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .leave-a-review-button:hover {
@@ -773,6 +775,41 @@
         display: none;
     }
 
+    .status-message {
+        background-color: #101010;
+        border-radius: 35px;
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        font-size: 1.3em;
+        width: 500px;
+        height: 385px;
+        padding: 50px 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: 1s ease-in;
+    }
+
+        /* js transition class */
+        .status-message.active {
+            visibility: visible;
+            opacity: 1;
+            transition: 1s ease-out;
+        }
+
+        .status-message.green {
+            color: #1FBFFB;
+        }
+
+        .status-message.red {
+            color: rgb(255, 55, 55);
+        }
+
     .leave-a-review-header {
         display: flex;
         justify-content: space-between;
@@ -797,6 +834,10 @@
         color: #1FBFFB;
     }
 
+        .askt.isempty {
+            color: rgb(255, 55, 55);
+        }
+
     .user-email, .user-name, .user-review {
         display: flex;
         flex-direction: column;
@@ -814,6 +855,10 @@
         position: relative;
     }
 
+        #user-email-input.isempty {
+            outline: 2px solid rgb(255, 55, 55);
+        }
+
     #user-email-input::-webkit-scrollbar,
     #user-name-input::-webkit-scrollbar {
         width: 0;
@@ -825,10 +870,20 @@
         position: relative;
     }
 
+        #user-review-input.isempty {
+            outline: 2px solid rgb(255, 55, 55);
+        }
+
     textarea::placeholder {
         position: absolute;
         top: 10px;
         left: 17px;
+    }
+
+    .bottom-end {
+        display: flex;
+        align-content: center;
+        margin-top: 20px;
     }
 
     .send-button {
@@ -836,18 +891,24 @@
         border-radius: 25px;
         color: #101010;
         font-weight: 500;
-        font-size: 1.05em;
         width: 100px;
+        height: 20px;
         padding: 12px 0;
-        margin-top: 20px;
-        text-align: center;
         cursor: pointer;
         margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .send-button:hover {
         background-color: #1FBFFB;
         transition: 0.5s ease-out;
+    }
+
+    .missing-field-message {
+        margin-right: 30px;
+        color: rgb(255, 55, 55);
     }
 
     #close-icon {

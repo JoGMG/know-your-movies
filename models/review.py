@@ -13,7 +13,7 @@ class Review(BaseModel, Base):
     user_id = Column(
         String(64), ForeignKey('users.id'), nullable=False
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
-    text = Column(
+    content = Column(
         String(1024), nullable=False
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
     if os.getenv('KYM_STORAGE') == 'db':

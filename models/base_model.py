@@ -4,7 +4,7 @@ from sqlalchemy import Column, String, Integer, ForeignKey, DATETIME, Date
 from sqlalchemy.orm import declarative_base, relationship
 import uuid
 import os
-from datetime import datetime
+from datetime import datetime, date
 
 Base = declarative_base()
 
@@ -37,12 +37,33 @@ class BaseModel:
 
         from models.user import User
         if isinstance(self, User):
-            if 'name' not in kwargs:
-                email = kwargs.get('email')
+            if 'author' not in kwargs or not kwargs.get('author'):
+                email = kwargs.get('email', None)
                 if email is None:
                     return
-                name = email.partition('@')
-                setattr(self, 'name', name[0])
+                author = email.partition('@')
+                setattr(self, 'author', author[0])
+
+        from models.movie import Movie
+        if isinstance(self, Movie):
+            release_date = kwargs.get('release_date')
+            if release_date:
+                year = release_date.partition('-')[0]
+                month = release_date.partition('-')[2].partition('-')[0]
+                day = release_date.partition('-')[2].partition('-')[2]
+                if os.getenv('KYM_STORAGE') == 'db':
+                    release_date_obj = date(int(year), int(month), int(day))
+                else:
+                    release_date_obj = str(date(
+                        int(year), int(month), int(day)))
+                setattr(self, 'release_date', release_date_obj)
+        
+        from models.review import Review
+        if isinstance(self, Review):
+            content = kwargs.get('content')
+            if content:
+                str_content = str(content).strip()
+                setattr(self, 'content', str_content)
 
     def __str__(self):
         """ Returns string representation. """
@@ -63,6 +84,8 @@ class BaseModel:
             if key != '_sa_instance_state':
                 if isinstance(value, datetime):
                     json_format[key] = value.isoformat()
+                elif isinstance(value, date) or key == 'content':
+                    json_format[key] = str(value)
                 else:
                     json_format[key] = value
         json_format['__class__'] = self.__class__.__name__

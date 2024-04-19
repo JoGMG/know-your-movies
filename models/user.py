@@ -10,7 +10,7 @@ class User(BaseModel, Base):
     email = Column(
         String(128), nullable=False
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
-    name = Column(
+    author = Column(
         String(128), nullable=True
     ) if os.getenv('KYM_STORAGE') == 'db' else ''
     if os.getenv('HBNB_TYPE_STORAGE') == 'db':

@@ -22,9 +22,10 @@ class DBStorage:
         pwd = os.getenv('KYM_PWD')
         host = os.getenv('KYM_HOST')
         name = os.getenv('KYM_DB')
-        DATABASE_URL = os.getenv("DATABASE_URL", "mysql+mysqldb://{}:{}@{}:3306/{}".format(
-            user, pwd, host, name
-        ))
+        DATABASE_URL = os.getenv(
+            "DATABASE_URL", "mysql+mysqldb://{}:{}@{}:3306/{}".format(
+                user, pwd, host, name
+            ))
         self.__engine = create_engine(
             DATABASE_URL,
             pool_pre_ping=True

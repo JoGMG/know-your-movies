@@ -53,7 +53,7 @@ class Movie(BaseModel, Base):
             movie_reviews = []
             for review in storage.all(Review).values():
                 if review.movie_id == self.id:
-                    movie_reviews.append(review.to_dict())
+                    movie_reviews.append(review)
             return movie_reviews
     if os.getenv('KYM_STORAGE') == 'db':
         genres = relationship('Genre', back_populates='movies')

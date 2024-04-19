@@ -22,11 +22,20 @@ def get_movie_reviews(movie_id):
     movie = storage.get(Movie, movie_id)
     if not movie:
         abort(404)
-    if os.getenv('KYM_STORAGE') == 'db':
-        movie_reviews = [review.to_dict() for review in movie.reviews]
-    else:
-        movie_reviews = [review for review in movie.reviews]
-    return jsonify(movie_reviews)
+    
+    movie_reviews = []
+    for review in movie.reviews:
+        review_dict = review.to_dict()
+        review_dict.pop("__class__")
+
+        user = storage.get(User, review.user_id)
+        ignore = ["id", "created_at", "updated_at", "__class__"]
+        for key, value in user.to_dict().items():
+            if key not in ignore:
+                review_dict[key] = value
+        movie_reviews.append(review_dict)
+
+    return jsonify({"results": movie_reviews})
 
 
 @app_views.route(
@@ -38,38 +47,47 @@ def post_movie_reviews(movie_id):
     Arguments:
         - `movie_id`: Movie instance ID.
     """
-    movie = storage.get(Movie, movie_id)
-    if not movie:
-        abort(404)
     req_data = request.get_json()
     if not req_data:
         return jsonify({"error": "Request data is empty or not a JSON"}), 400
-    if 'text' not in req_data:
-        return jsonify({"error": "Missing text"}), 400
+    if 'title' not in req_data:
+        return jsonify({"error": "Missing title"}), 400
+    if 'release_date' not in req_data:
+        return jsonify({"error": "Missing release date"}), 400
     if 'email' not in req_data:
         return jsonify({"error": "Missing email"}), 400
+    if 'content' not in req_data:
+        return jsonify({"error": "Missing content"}), 400
+
+    movie = storage.get(Movie, movie_id)
+    if not movie:
+        new_movie = Movie(
+            id=movie_id,
+            title=req_data["title"],
+            release_date=req_data["release_date"],
+            poster_path=req_data.get("poster_path", None),
+            overview=req_data.get("overview", None)
+        )
+        new_movie.save()
+
     user_id = None
     user_email = req_data.get('email', None)
-    for user in storage.all(User).values():
-        if user_email:
+    user_author = req_data.get('author', None)
+    if user_email:
+        for user in storage.all(User).values():
             if user_email == user.email:
                 user_id = user.id
     if not user_id:
-        if 'name' not in req_data:
-            if user_email:
-                new_user = User(email=user_email)
-        else:
-            user_name = req_data.get('name', None)
-            if user_email and user_name:
-                new_user = User(email=user_email, name=user_name)
+        new_user = User(email=user_email, author=user_author)
         new_user.save()
         user_id = new_user.id
+
     req_data['movie_id'] = movie_id
     req_data['user_id'] = user_id
     new_movie_review = Review(
         movie_id=req_data['movie_id'],
         user_id=req_data['user_id'],
-        text=req_data['text']
+        content=req_data['content']
     )
     new_movie_review.save()
     return jsonify(new_movie_review.to_dict()), 201
